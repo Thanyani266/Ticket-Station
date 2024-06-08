@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ticket Station</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a997eb58cf.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <nav class="nav">
+        <a class="fw-bold bg-success text-white text-capitalize w-100 text-center text-decoration-none py-2">
+            <i class="fa-solid fs-4 fa-arrows-to-eye me-2"></i><span class="fs-5">Click here to view the latest deals</span>
+        </a>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse row" id="navbarNavAltMarkup">
+          <div class="navbar-nav justify-content-end">
+            <a class="nav-link tab-link" href="#" data-div="div-four">Log in</a>
+            <a class="nav-link" href="#">Tickets</a>
+            <a class="nav-link" href="#">Likes</a>
+            <a class="nav-link" href="#">Location</a>
+            <a class="nav-link" href="#">Logout</a>
+          </div>
+          <div class="navbar-nav justify-content-center">
+            <a class="nav-link text-uppercase tab-link" href="#" data-div="div-one">Home</a> 
+            <a class="nav-link text-uppercase tab-link" href="#" data-div="div-two">Events</a>
+            <a class="nav-link text-uppercase tab-link" href="#" data-div="div-seven">Tourism & Activities</a>
+            <a class="nav-link text-uppercase tab-link" href="#" data-div="div-three">Vouchers</a>
+          </div>
+          <div class="navbar-nav justify-content-end">
+            <a class="nav-link rounded"><i class="fa-solid fa-cart-shopping tab-link" data-div="div-six"></i> <sup class="cart-items">3</sup> | R <span class="cart-total">45.78</span></a>
+          </div>
+        </div>
+            
+    </div>
+    </nav>
+    <!--  -->
+
+    <!-- Homepage Content -->
+    <div class="main-page div-one content">
+      <div class="search-card">
+        <div class="card rounded-0 text-muted border-top border-success border-start-0 border-3" style="clip-path: polygon(0 0, 99% 0, 99% 35%, 0 44%);">
+        <img src="./images/1444345-best-white-background-wallpaper-images-1920x1200.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay mt-5">
+          <h2 class="card-title text-center text-success fw-bold fs-1">Live More.</h2>
+          <p class="card-text fs-4 text-center fw-bold"><a href="#" class="text-success text-decoration-none">Sign in</a> and we'll help you find events you'll like.</p>
+          <div class="input-group mx-auto w-50 mb-3">
+            <input type="text" class="form-control rounded-pill fs-5 p-2 me-2" placeholder=" Search for any event" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <span class="input-group-text btn btn-outline-success fs-5 rounded-pill p-2 px-4" id="basic-addon2"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+          </div>
+          <p class="card-text fs-5 text-center"><i class="fa-solid fa-location-dot text-secondary me-2"></i>To find events near you, set your location <a href="#" class="text-success text-decoration-none">here</a>.</p>
+        </div>
+        </div>
+      </div>
+    
+      <div> 
+        <div class="container items-container text-center my-3">
+        <h1 class="text-start mx-2 mb-2"><i class="fa-regular fa-star text-success me-2"></i>Featured Events</h1> 
+        <ul class="nav justify-content-center my-3">
+          <li class="nav-item">
+            <a class="nav-link fs-4 text-decoration-none text-success active" aria-current="page" href="#">Featured</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4 text-decoration-none text-success" href="#">Featured Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4 text-decoration-none text-success" href="#">Music</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4 text-decoration-none text-success" href="#">Tourism</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4 text-decoration-none text-success" href="#">Festival</a>
+          </li>
+        </ul>
+        <div class="wrapper">
+          <ul class="carousel">
+            <li class="card car-card"></li>
+          </ul>
+          <button id="left" class="carousel-control-prev text-danger bg-light bg-opacity-25" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <i class="fa-solid fa-arrow-left p-2"></i>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button id="right" class="carousel-control-next text-danger bg-light bg-opacity-25" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <i class="fa-solid fa-arrow-right p-2"></i>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        
+        
+      <button class="btn btn-success fs-5 text-uppercase my-5">See more <i class="fa-solid fa-caret-down"></i></button>
+        </div>
+
+        <div class="signup-card">
+      <div class="card rounded-0" style="clip-path: polygon(0% 17%, 100% 1%, 100% 82%, 0% 99%);">
+          <img src="./images/1444345-best-white-background-wallpaper-images-1920x1200.jpg" class="card-img" alt="...">
+          <div class="card-img-overlay text-center mt-5">
+            <p class="text-center fs-1 fw-bold text-success"><i class="fa-regular fa-envelope"></i></p>
+            <h2 class="card-title text-center text-success fw-bold fs-1">Live More. Starting from your inbox.</h2>
+            <p class="card-text fs-3 text-center w-50 mx-auto text-muted">Sign-up for our weekly email newsletter so that you can be the first to know about the biggest events and the ones we think you <span class="fw-bold">personally would</span> like.</p>
+            <button class="btn btn-outline-success fs-5 text-uppercase"><i class="fa-solid fa-check"></i> Sign up</button>
+          </div>
+      </div>
+        </div>
+
+        <div class="social-card border border-danger border-3">
+          <div class="card rounded-0">
+            <div class="card-img-overlay text-center mt-5">
+              <p class="text-center fs-1 text-success"><i class="fa-regular fa-face-smile"></i></p>
+              <h2 class="card-title text-center fw-bold fs-2">Let's get social.</h2>
+              <p class="card-text fs-4 text-center w-50 mx-auto text-muted">If you miss it in your inbox, you can still catch our greatest events on social media.</p>
+              <div class="p-4">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                  <!-- Facebook -->
+                  <a class="btn btn-outline-secondary btn-floating rounded-pill px-3 fs-3 m-1" href="#!" role="button"
+                  ><i class="fab fa-facebook-f"></i
+                  ></a>
+      
+                  <!-- Twitter -->
+                  <a class="btn btn-outline-secondary btn-floating rounded-pill fs-3 m-1" href="#!" role="button"
+                  ><i class="fab fa-twitter"></i
+                  ></a>
+      
+                  <!-- Instagram -->
+                  <a class="btn btn-outline-secondary btn-floating rounded-pill fs-3 m-1" href="#!" role="button"
+                  ><i class="fab fa-instagram"></i
+                  ></a>
+                </section>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Homepage Content-->
+    <!-- Cart -->
+    <div class="cart container div-six content bg-danger my-5">
+      <span class="close-cart float-end">
+        <i class="fa-solid fa-x"></i>
+      </span>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Item</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody class="cart-content">
+            <tr>
+              <th scope="row">1</th>
+              <td>
+                  <img src="./images/panel_hotelskywebimageOLDNEW123.jpg" class="img-fluid" style="width: 20%;" alt="...">
+                  <span class="fw-bold text-reset fs-4 text-center">Jogging in the township</span>
+              </td>
+              <td class="fs-3 fw-bold text-muted">R 56.99</td>
+              <td><i class="fa-solid fa-minus bg-danger rounded text-white me-2 p-2"></i><span class="fs-4 text-secondary">1</span><i class="fa-solid fa-plus rounded text-white bg-success mx-2 p-2"></i></td>
+              <td><i class="fa-solid fa-trash text-danger fs-3 mt-2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <!-- Cart -->
+
+    <!-- Featured Events -->
+    <div class="events-page div-two content">
+      <nav class="navbar navbar-expand-lg border border-top border-3 border-danger bg-body-tertiary">
+        <div class="container clearfix">
+          <div class="text-uppercase d-inline-block float-start">Entertainment - <span>Featured</span></div>
+          <div class="text-uppercase d-inline-block float-end"><span>Events</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span>Entertainment</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span class="end-0">Featured</span></div>
+        </div>
+      </nav>
+      <div class="container row mx-auto py-4">
+        <div class="border-bottom text-uppercase fw-bold text-muted col-md-3">Categories</div>
+        <div class="col-md-3">Where: 
+          <select class="form-select form-select-lg" id="featured-city" aria-label=".form-select-lg example">
+            <option value="anywhere">Anywhere</option>
+            <option value="cape town">Cape Town</option>
+            <option value="stellenbosch">Stellenbosch</option>
+            <option value="port elizabeth">Port Elizabeth</option>
+            <option value="durbanville">Durbanville</option>
+          </select>
+        </div>
+        <div class="col-md-3">When:
+          <select class="form-select form-select-lg" id="featured-date" aria-label=".form-select-lg example">
+            
+          </select>
+        </div>
+        <div class="col-md-3">Showing: <span>123 items</span></div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <ul class="list-unstyled ps-0">
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded" onclick="changeIcon(this)" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                  <i id="caretIcon" class="fa-solid fa-caret-down"></i> Entertainment
+                </button>
+                <div class="container collapse show" id="home-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-two">Featured</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-eight">Music</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-seven">Tourism</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-nine">Festival</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-ten">Theatre</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-eleven">Movies</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" onclick="changeIcon(this)" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                  <i id="caretIcon" class="fa-solid fa-caret-right"></i> Active (race entries)
+                </button>
+                <div class="container collapse" id="dashboard-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Featured Active</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Fitness Classes</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Multisport</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Road Cycling</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Road Running</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Walking Events</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                  <i class="fa-solid fa-caret-right"></i> All Events
+                </button>
+              </li>
+              <li class="border-top my-3"></li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="container border-bottom mb-2">
+              <div class="row featured-events" id="featured-cards">
+
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="me-auto">
+                <ul class="d-flex list-unstyled">
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2 active">1</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">2</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">3</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">4</li>
+                </ul>
+              </div>
+              <div class="text-end">
+                <button class="btn btn-success rounded">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Featured Events -->
+
+    <!-- Music -->
+    <div class="events-page div-eight content">
+      <nav class="navbar navbar-expand-lg border border-top border-3 border-danger bg-body-tertiary">
+        <div class="container clearfix">
+          <div class="text-uppercase d-inline-block float-start">Entertainment - <span>Music</span></div>
+          <div class="text-uppercase d-inline-block float-end"><span>Home</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span>Entertainment</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span class="end-0">Music</span></div>
+        </div>
+      </nav>
+      <div class="container row mx-auto py-4">
+        <div class="border-bottom text-uppercase fw-bold text-muted col-md-3">Categories</div>
+        <div class="col-md-3">Where: 
+          <select class="form-select form-select-lg" id="music-city" aria-label=".form-select-lg example">
+            <option value="anywhere">Anywhere</option>
+            <option value="cape town">Cape Town</option>
+            <option value="stellenbosch">Stellenbosch</option>
+            <option value="port elizabeth">Port Elizabeth</option>
+            <option value="durbanville">Durbanville</option>
+          </select>
+        </div>
+        <div class="col-md-3">When:
+          <select class="form-select form-select-lg" id="music-date" aria-label=".form-select-lg example">
+            
+          </select>
+        </div>
+        <div class="col-md-3">Showing: <span>123 items</span></div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <ul class="list-unstyled ps-0">
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded" onclick="changeIcon(this)" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                  <i id="caretIcon" class="fa-solid fa-caret-down"></i> Entertainment
+                </button>
+                <div class="container collapse show" id="home-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-two">Featured</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-eight">Music</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-seven">Tourism</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-nine">Festival</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-ten">Theatre</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-eleven">Movies</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" onclick="changeIcon(this)" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                  <i id="caretIcon" class="fa-solid fa-caret-right"></i> Active (race entries)
+                </button>
+                <div class="container collapse" id="dashboard-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Featured Active</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Fitness Classes</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Multisport</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Road Cycling</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Road Running</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Walking Events</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                  <i class="fa-solid fa-caret-right"></i> All Events
+                </button>
+              </li>
+              <li class="border-top my-3"></li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="container border-bottom mb-2">
+              <div class="row music-events" id="music-cards">
+
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="me-auto">
+                <ul class="d-flex list-unstyled">
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2 active">1</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">2</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">3</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">4</li>
+                </ul>
+              </div>
+              <div class="text-end">
+                <button class="btn btn-success rounded">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Music -->
+
+    <!-- Tourism -->
+    <div class="events-page div-seven content">
+      <nav class="navbar navbar-expand-lg border border-top border-3 border-danger bg-body-tertiary">
+        <div class="container clearfix">
+          <div class="text-uppercase d-inline-block float-start">Entertainment - <span>Tourism</span></div>
+          <div class="text-uppercase d-inline-block float-end"><span>Home</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span>Entertainment</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span class="end-0">Tourism</span></div>
+        </div>
+      </nav>
+      <div class="container row mx-auto py-4">
+        <div class="border-bottom text-uppercase fw-bold text-muted col-md-3">Categories</div>
+        <div class="col-md-3">Where: 
+          <select class="form-select form-select-lg" id="tourism-city" aria-label=".form-select-lg example">
+            <option value="anywhere">Anywhere</option>
+            <option value="cape town">Cape Town</option>
+            <option value="stellenbosch">Stellenbosch</option>
+            <option value="port elizabeth">Port Elizabeth</option>
+            <option value="durbanville">Durbanville</option>
+          </select>
+        </div>
+        <div class="col-md-3">When:
+          <select class="form-select form-select-lg" id="tourism-date" aria-label=".form-select-lg example">
+            
+          </select>
+        </div>
+        <div class="col-md-3">Showing: <span>123 items</span></div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <ul class="list-unstyled ps-0">
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded" onclick="changeIcon(this)" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                  <i id="caretIcon" class="fa-solid fa-caret-down"></i> Entertainment
+                </button>
+                <div class="container collapse show" id="home-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-two">Featured</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-eight">Music</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-seven">Tourism</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-nine">Festival</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-ten">Theatre</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-eleven">Movies</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" onclick="changeIcon(this)" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                  <i id="caretIcon" class="fa-solid fa-caret-right"></i> Active (race entries)
+                </button>
+                <div class="container collapse" id="dashboard-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Featured Active</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Fitness Classes</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Multisport</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Road Cycling</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Road Running</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Walking Events</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                  <i class="fa-solid fa-caret-right"></i> All Events
+                </button>
+              </li>
+              <li class="border-top my-3"></li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="container border-bottom mb-2">
+              <div class="row tourism-events" id="tourism-cards">
+
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="me-auto">
+                <ul class="d-flex list-unstyled">
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2 active">1</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">2</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">3</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">4</li>
+                </ul>
+              </div>
+              <div class="text-end">
+                <button class="btn btn-success rounded">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tourism -->
+
+    <!-- Festival -->
+    <div class="events-page div-nine content">
+      <nav class="navbar navbar-expand-lg border border-top border-3 border-danger bg-body-tertiary">
+        <div class="container clearfix">
+          <div class="text-uppercase d-inline-block float-start">Entertainment - <span>Festival</span></div>
+          <div class="text-uppercase d-inline-block float-end"><span>Home</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span>Entertainment</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span class="end-0">Festival</span></div>
+        </div>
+      </nav>
+      <div class="container row mx-auto py-4">
+        <div class="border-bottom text-uppercase fw-bold text-muted col-md-3">Categories</div>
+        <div class="col-md-3">Where: 
+          <select class="form-select form-select-lg" id="festival-city" aria-label=".form-select-lg example">
+            <option value="anywhere">Anywhere</option>
+            <option value="cape town">Cape Town</option>
+            <option value="stellenbosch">Stellenbosch</option>
+            <option value="port elizabeth">Port Elizabeth</option>
+            <option value="durbanville">Durbanville</option>
+          </select>
+        </div>
+        <div class="col-md-3">When:
+          <select class="form-select form-select-lg" id="festival-date" aria-label=".form-select-lg example">
+            
+          </select>
+        </div>
+        <div class="col-md-3">Showing: <span>123 items</span></div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <ul class="list-unstyled ps-0">
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded" onclick="changeIcon(this)" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                  <i id="caretIcon" class="fa-solid fa-caret-down"></i> Entertainment
+                </button>
+                <div class="container collapse show" id="home-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-two">Featured</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-eight">Music</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-seven">Tourism</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-nine">Festival</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-ten">Theatre</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-eleven">Movies</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" onclick="changeIcon(this)" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                  <i id="caretIcon" class="fa-solid fa-caret-right"></i> Active (race entries)
+                </button>
+                <div class="container collapse" id="dashboard-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Featured Active</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Fitness Classes</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Multisport</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Road Cycling</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Road Running</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Walking Events</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                  <i class="fa-solid fa-caret-right"></i> All Events
+                </button>
+              </li>
+              <li class="border-top my-3"></li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="container border-bottom mb-2">
+              <div class="row festival-events" id="festival-cards">
+
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="me-auto">
+                <ul class="d-flex list-unstyled">
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2 active">1</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">2</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">3</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">4</li>
+                </ul>
+              </div>
+              <div class="text-end">
+                <button class="btn btn-success rounded">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Festival -->
+
+    <!-- Theatre -->
+    <div class="events-page div-ten content">
+      <nav class="navbar navbar-expand-lg border border-top border-3 border-danger bg-body-tertiary">
+        <div class="container clearfix">
+          <div class="text-uppercase d-inline-block float-start">Entertainment - <span>Theatre</span></div>
+          <div class="text-uppercase d-inline-block float-end"><span>Home</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span>Entertainment</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span class="end-0">Theatre</span></div>
+        </div>
+      </nav>
+      <div class="container row mx-auto py-4">
+        <div class="border-bottom text-uppercase fw-bold text-muted col-md-3">Categories</div>
+        <div class="col-md-3">Where: 
+          <select class="form-select form-select-lg" id="theatre-city" aria-label=".form-select-lg example">
+            <option value="anywhere">Anywhere</option>
+            <option value="cape town">Cape Town</option>
+            <option value="stellenbosch">Stellenbosch</option>
+            <option value="port elizabeth">Port Elizabeth</option>
+            <option value="durbanville">Durbanville</option>
+          </select>
+        </div>
+        <div class="col-md-3">When:
+          <select class="form-select form-select-lg" id="theatre-date" aria-label=".form-select-lg example">
+            
+          </select>
+        </div>
+        <div class="col-md-3">Showing: <span>123 items</span></div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <ul class="list-unstyled ps-0">
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded" onclick="changeIcon(this)" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                  <i id="caretIcon" class="fa-solid fa-caret-down"></i> Entertainment
+                </button>
+                <div class="container collapse show" id="home-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-two">Featured</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-eight">Music</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-seven">Tourism</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-nine">Festival</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-ten">Theatre</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-eleven">Movies</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" onclick="changeIcon(this)" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                  <i id="caretIcon" class="fa-solid fa-caret-right"></i> Active (race entries)
+                </button>
+                <div class="container collapse" id="dashboard-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Featured Active</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Fitness Classes</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Multisport</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Road Cycling</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Road Running</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Walking Events</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                  <i class="fa-solid fa-caret-right"></i> All Events
+                </button>
+              </li>
+              <li class="border-top my-3"></li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="container border-bottom mb-2">
+              <div class="row theatre-events" id="theatre-cards">
+
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="me-auto">
+                <ul class="d-flex list-unstyled">
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2 active">1</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">2</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">3</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">4</li>
+                </ul>
+              </div>
+              <div class="text-end">
+                <button class="btn btn-success rounded">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Theatre -->
+
+    <!-- Movies -->
+    <div class="events-page div-eleven content">
+      <nav class="navbar navbar-expand-lg border border-top border-3 border-danger bg-body-tertiary">
+        <div class="container clearfix">
+          <div class="text-uppercase d-inline-block float-start">Entertainment - <span>Movies</span></div>
+          <div class="text-uppercase d-inline-block float-end"><span>Home</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span>Entertainment</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span class="end-0">Movies</span></div>
+        </div>
+      </nav>
+      <div class="container row mx-auto py-4">
+        <div class="border-bottom text-uppercase fw-bold text-muted col-md-3">Categories</div>
+        <div class="col-md-3">Where: 
+          <select class="form-select form-select-lg" id="movies-city" aria-label=".form-select-lg example">
+            <option value="anywhere">Anywhere</option>
+            <option value="cape town">Cape Town</option>
+            <option value="stellenbosch">Stellenbosch</option>
+            <option value="port elizabeth">Port Elizabeth</option>
+            <option value="durbanville">Durbanville</option>
+          </select>
+        </div>
+        <div class="col-md-3">When:
+          <select class="form-select form-select-lg" id="movies-date" aria-label=".form-select-lg example">
+            
+          </select>
+        </div>
+        <div class="col-md-3">Showing: <span>123 items</span></div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <ul class="list-unstyled ps-0">
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded" onclick="changeIcon(this)" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                  <i id="caretIcon" class="fa-solid fa-caret-down"></i> Entertainment
+                </button>
+                <div class="container collapse show" id="home-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-two">Featured</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-eight">Music</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-seven">Tourism</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-nine">Festival</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-ten">Theatre</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded tab-link" data-div="div-eleven">Movies</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" onclick="changeIcon(this)" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                  <i id="caretIcon" class="fa-solid fa-caret-right"></i> Active (race entries)
+                </button>
+                <div class="container collapse" id="dashboard-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Featured Active</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Fitness Classes</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Multisport</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Road Cycling</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Road Running</a></li>
+                    <li><a href="#" class="link-dark text-decoration-none rounded">Walking Events</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                  <i class="fa-solid fa-caret-right"></i> All Events
+                </button>
+              </li>
+              <li class="border-top my-3"></li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="container border-bottom mb-2">
+              <div class="row movies-events" id="movies-cards">
+
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="me-auto">
+                <ul class="d-flex list-unstyled">
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2 active">1</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">2</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">3</li>
+                  <li class="text-decoration-none btn btn-outline-success rounded-pill me-2">4</li>
+                </ul>
+              </div>
+              <div class="text-end">
+                <button class="btn btn-success rounded">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Movies -->
+
+    <!-- Vouchers -->
+    <div class="vouchers-page div-three content">
+      <div class="card rounded-0">
+        <img src="./images/1444345-best-white-background-wallpaper-images-1920x1200.jpg" style="height: 300px; width: 100%;" alt="...">
+        <div class="card-img-overlay text-center mt-5">
+          <p class="card-title fs-1 fw-bold text-uppercase text-success">Prepaid Vouchers</p>
+          <p class="card-text fs-3 fw-bold text-muted">Purchase your voucher and reedem online or gift your friends and family</p>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <div class="row vouchers">
+          
+        </div>
+      </div>
+    </div>
+    <!-- Vouchers -->
+
+    <!-- Log In -->
+    <div class="div-four content">
+      <nav class="navbar navbar-expand-lg border border-top border-3 border-danger bg-body-tertiary">
+        <div class="container clearfix">
+          <div class="text-uppercase d-inline-block float-start">LogIn To Account</div>
+          <div class="text-uppercase d-inline-block float-end"><span>Home</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span>LogIn To Account</span></div>
+        </div>
+      </nav>
+      <div class="container rounded border border-2 bg-danger bg-opacity-25 py-2 px-5 w-50 mt-5">
+        <h2 class="text-muted fw-bold text-center text-capitalize my-5">Customer Login</h2>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label text-capitalize">username</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput2" class="form-label text-capitalize">password</label>
+        <input type="password" class="form-control" id="exampleFormControlInput2">
+      </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Remember me
+          </label>
+          <div class="float-end">Forgot password? <span>Click here</span></div>
+        </div>
+        
+      <div class="text-center">
+        <button class="btn btn-success rounded-pill px-5 fs-5">Log In</button>
+      </div>
+      <p class="text-center my-3 fw-bold">Don't have an account? <a href="#" class="tab-link" data-div="div-five">Register</a></p>
+      </div>
+    </div>
+    <!-- Log In -->
+
+    <!-- Registration -->
+    <div class="div-five content">
+      <nav class="navbar navbar-expand-lg border border-top border-3 border-danger bg-body-tertiary">
+        <div class="container clearfix">
+          <div class="text-uppercase d-inline-block float-start">Register Your Account</div>
+          <div class="text-uppercase d-inline-block float-end"><span>Home</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span>Register Your Account</span></div>
+        </div>
+      </nav>
+      <div class="container rounded border border-2 bg-danger bg-opacity-25 py-2 px-5 w-50 mt-5">
+        <h2 class="text-muted fw-bold text-center text-capitalize my-5">User Registration</h2>
+      <div class="mb-3">
+        <label for="exampleFormControlInput3" class="form-label text-capitalize">username</label>
+        <input type="text" class="form-control" id="exampleFormControlInput3">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput4" class="form-label text-capitalize">email</label>
+        <input type="email" class="form-control" id="exampleFormControlInput4">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput5" class="form-label text-capitalize">password</label>
+        <input type="password" class="form-control" id="exampleFormControlInput5">
+      </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Remember me
+          </label>
+        </div>
+        
+      <div class="text-center">
+        <button class="btn btn-success rounded-pill px-5 fs-5">Register</button>
+      </div>
+      <p class="text-center my-3 fw-bold">Already have an account? <a href="#" class="tab-link" data-div="div-four">Login</a></p>
+      </div>
+    </div>
+    <!-- Registration -->
+
+  <div class="f-footer">
+    <!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+  </section>
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Company name
+          </h6>
+          <p>
+            The leader in online ticket sales in South Africa since 2011.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Find events
+          </h6>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none">Browse</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none">Favorite</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none">Smart Shopper Deals</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Help & Info
+          </h6>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none">Get Help</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none">FAQ's</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none">Privacy Policy</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">My Account</h6>
+          <p><i class="fa-regular fa-user me-3"></i>My Profile</p>
+          <p>
+            <i class="fa-solid fa-ticket me-3"></i>My Tickets
+          </p>
+          <p><i class="fa-solid fa-clock-rotate-left me-3"></i>My Order History</p>
+          <p><i class="fa-regular fa-heart me-3"></i>My Likes</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center bg-danger bg-opacity-25 p-4">
+    © 2024 Copyright:
+    <a class="text-reset fw-bold text-decoration-none" href="#">Carlos Levi</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+  </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
