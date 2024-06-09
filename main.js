@@ -108,6 +108,8 @@ function changeFaIcon(anchor) {
     icon.classList.toggle('fa-solid');
 }
 
+//import { jimba } from "./js/detail.js";
+//jimba();
 // Variables
 
 const cartItems = document.querySelector('.cart-items');

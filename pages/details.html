@@ -22,7 +22,7 @@
         <div class="product-info container">
             <h2 class="nd-title text-center"></h2>
             <h6 class="text-center text-muted bg-warning bg-opacity-25 fs-4 item-price my-3"></h6>
-            <div class="d-grid col-6 mx-auto">
+            <div class="d-grid col-6 mx-auto add-to-cart">
                 <button class="btn btn-success text-capitalize" type="button">Add to cart</button>
             </div>
             <h4 class="text-center fw-bold text-danger mt-5">About</h4>
@@ -63,128 +63,6 @@
             <div class="row similar-events">
                 
             </div>
-        </div>
-
-        <div class="container">
-            <select id="date">
-            </select>
-
-            <div class="row" id="cards">
-                <div class="coll col-md-4 mb-3">
-                    <a href="#" style="text-decoration:none;">
-                        <div class="card border-0 bg-success bg-opacity-25">
-                            <img src="../images/panel_Buzani 2017© Bronwyn Lloyd0G4B9284 (1)_20240228_121048.jpg" class="card-img-top" alt="...">
-                            <div class="card-img-overlay heartIcon text-end">
-                              <span onclick="changeFaIcon(this)" class="me-3 text-danger bg-white bg-opacity-50 rounded-pill fs-4 px-1">
-                                <i id="faHeart" class="fa-regular fa-heart"></i>
-                              </span>
-                            </div>
-                            <div class="card-body d-flex flex-column" style="height:250px;">
-                              <p class="text-muted text-uppercase fw-bold">From R34</p>
-                              <h5 class="card-title">Jimba</h5>
-                              <p class="card-text item-city">Polokwane</p>
-                              <p class="item-date">From 08 Jun 2024 09:00</p>
-                              <div class="btn-nn"></div>
-                              <p class="card-text fs-5 text-secondary mt-auto">123.00</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="coll col-md-4 mb-3">
-                    <a href="#" style="text-decoration:none;">
-                        <div class="card border-0 bg-success bg-opacity-25">
-                            <img src="../images/panel_Buzani 2017© Bronwyn Lloyd0G4B9284 (1)_20240228_121048.jpg" class="card-img-top" alt="...">
-                            <div class="card-img-overlay heartIcon text-end">
-                              <span onclick="changeFaIcon(this)" class="me-3 text-danger bg-white bg-opacity-50 rounded-pill fs-4 px-1">
-                                <i id="faHeart" class="fa-regular fa-heart"></i>
-                              </span>
-                            </div>
-                            <div class="card-body d-flex flex-column" style="height:250px;">
-                              <p class="text-muted text-uppercase fw-bold">From R34</p>
-                              <h5 class="card-title">Jimba</h5>
-                              <p class="card-text item-city">JHB</p>
-                              <p class="item-date">From 09 Jun 2024 19:00</p>
-                              <div class="btn-nn"></div>
-                              <p class="card-text fs-5 text-secondary mt-auto">123.00</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="coll col-md-4 mb-3">
-                    <a href="#" style="text-decoration:none;">
-                        <div class="card border-0 bg-success bg-opacity-25">
-                            <img src="../images/panel_Buzani 2017© Bronwyn Lloyd0G4B9284 (1)_20240228_121048.jpg" class="card-img-top" alt="...">
-                            <div class="card-img-overlay heartIcon text-end">
-                              <span onclick="changeFaIcon(this)" class="me-3 text-danger bg-white bg-opacity-50 rounded-pill fs-4 px-1">
-                                <i id="faHeart" class="fa-regular fa-heart"></i>
-                              </span>
-                            </div>
-                            <div class="card-body d-flex flex-column" style="height:250px;">
-                              <p class="text-muted text-uppercase fw-bold">From R34</p>
-                              <h5 class="card-title">Jimba</h5>
-                              <p class="card-text item-city">Cape Town</p>
-                              <p class="item-date">From 18 Jul 2024 10:00</p>
-                              <div class="btn-nn"></div>
-                              <p class="card-text fs-5 text-secondary mt-auto">123.00</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <a href="#" style="text-decoration:none;">
-                        <div class="card border-0 bg-success bg-opacity-25">
-                            <img src="../images/panel_Buzani 2017© Bronwyn Lloyd0G4B9284 (1)_20240228_121048.jpg" class="card-img-top" alt="...">
-                            <div class="card-img-overlay heartIcon text-end">
-                              <span onclick="changeFaIcon(this)" class="me-3 text-danger bg-white bg-opacity-50 rounded-pill fs-4 px-1">
-                                <i id="faHeart" class="fa-regular fa-heart"></i>
-                              </span>
-                            </div>
-                            <div class="card-body d-flex flex-column" style="height:250px;">
-                              <p class="text-muted text-uppercase fw-bold">From R34</p>
-                              <h5 class="card-title">Jimba</h5>
-                              <p class="card-text item-city">Durban</p>
-                              <p class="item-date">From 08 Jun 2024 02:30</p>
-                              <div class="btn-nn"></div>
-                              <p class="card-text fs-5 text-secondary mt-auto">123.00</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-    
-            <table id="table" class="table table-striped">
-                <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Gender</th>
-                    <th>City</th>
-                </tr>
-    
-                <tr>
-                    <td>Helen</td>
-                    <td>56</td>
-                    <td>Female</td>
-                    <td>Polokwane</td>
-                </tr>
-                <tr>
-                    <td>Jonas</td>
-                    <td>13</td>
-                    <td>Male</td>
-                    <td>Cape Town</td>
-                </tr>
-                <tr>
-                    <td>Namadzavho</td>
-                    <td>23</td>
-                    <td>Male</td>
-                    <td>JHB</td>
-                </tr>
-                <tr>
-                    <td>Mbudziso</td>
-                    <td>4</td>
-                    <td>Female</td>
-                    <td>Durban</td>
-                </tr>
-            </table>
         </div>
     </div>
 
@@ -254,54 +132,23 @@
                     </a>
                 </div>`;
             });
-        }
 
-        // testing
-        document.querySelector('#date').addEventListener("change", filterEventsByDate);
-        const itemDate = document.querySelector('#date');
-        const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-        let x = '';
-        const d = new Date();
-        const getDate = (d.getDate() < 10 ? '0' : '') + d.getDate();
-        const getDateT = (d.getDate() < 10 ? '0' : '') + (d.getDate() + 1);
-        const getDateS = (d.getDate() < 10 ? '0' : '') + (d.getDate() + (6 - d.getDay()));
-        const getDateSun = (d.getDate() < 10 ? '0' : '') + (d.getDate() + (7 - d.getDay()));
-        const monthName = month[d.getMonth()];
-        const hour = (d.getHours() < 10 ? '0' : '') + d.getHours();
-        const minutes = (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
-        const time = `${hour}:${minutes}`;
+            const addToCart = document.querySelector('.add-to-cart button');
+            addToCart.addEventListener("click", jimba);
+            let myArray = []; // initialize an empty array
 
-        const selectData = [{value:"anytime", label:"Anytime"},
-            {value:`${getDate} ${monthName} ${d.getFullYear()}`, label: "Today"},
-            {value:`${getDateT} ${monthName} ${d.getFullYear()}`, label:"Tomorrow"},
-            {value:`${getDateS} ${monthName} ${d.getFullYear()}`, label:"This Saturday"},
-            {value:`${getDateSun} ${monthName} ${d.getFullYear()}`, label:"This Sunday"},
-            {value:`${monthName} ${d.getFullYear()}`, label:"This Month"}
-        ]
-
-        selectData.forEach(t => {
-            console.log(t.value);
-            x += `<option value="${t.value}">${t.label}</option>`;
-        })
-
-        itemDate.innerHTML = x;
-
-        function filterEventsByDate(){
-            const selectedOption = document.querySelector('#date').value;
-            //const card = document.querySelectorAll('#cards a');
-            const cardDate = document.querySelectorAll('#cards .item-date');
-
-            cardDate.forEach((item) => {
-            if(item.textContent.includes(selectedOption) || selectedOption === "anytime"){
-                let section = item.parentElement;
-                section.parentNode.style.display = "";
+            if(JSON.parse(localStorage.getItem("cartt")) != null){
+                myArray = JSON.parse(localStorage.getItem("cartt"));
             }else{
-                let section = item.parentElement;
-                section.parentNode.style.display = "none";
-                //item.style.display = "";
+                myArray = [];
+            }
+            
+            function jimba(){
+                myArray.push(thisProduct);
+                localStorage.setItem('cartt', JSON.stringify(myArray));
+                //window.location.href = "cart";
+            }
         }
-    });
-}
     </script>
 </body>
 </html>
