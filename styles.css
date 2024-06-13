@@ -12,6 +12,8 @@ body{
     max-height: 600px;
 }
 
+/* ------------------------------------------------------------------------------------------------- */
+
 @media (max-width: 767px) {
     .carousel-inner .carousel-item > div {
         display: none;

@@ -80,6 +80,7 @@ carousel.addEventListener('scroll', infiniteScroll);
 wrapper.addEventListener("mouseenter", () => setTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
 
+
 /* $(document).ready(function() {
     $(window).scroll(function() {
         if ($(document).height() <= ($(window).height() + $(window).scrollTop())) {
@@ -379,7 +380,8 @@ class UI {
             const time = `${hour}:${minutes}`;
 
             resultHome +=`
-            <div class="card mx-2">
+            <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
+            <div class="card">
               <div class="img">
                 <img src="./images/${product.img}" class="img-fluid" draggable="false" alt="">
               </div>
@@ -387,7 +389,8 @@ class UI {
               <span class="card-title fw-bold fs-5">${product.title}</span>
               <p>${product.venue}</p>
               <span class="card-text text-secondary fw-bold">${product.price}</span>
-            </div>`;
+            </div>
+            </a>`;
         });
         let resultEvents = '';
         let tourismE = '';
@@ -757,17 +760,10 @@ class UI {
     setCartValues(cart){
         let tempTotal = 0;
         let itemsTotal = 0;
-        let singleItemTotal = 0;
-        let singleTempTotal = 0;
         cart.map(item => {
             tempTotal += item.price * item.quantity;
             itemsTotal += item.quantity;
         })
-        cart.forEach(item => {
-            singleTempTotal += item.price * item.quantity;
-            singleItemTotal += item.quantity;
-        })
-        console.log(singleItemTotal, singleTempTotal);
         cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
         cartTotalTwo.innerText = parseFloat(tempTotal.toFixed(2));
         cartItems.innerText = itemsTotal;
@@ -840,7 +836,7 @@ class UI {
         }
     }
     removeCartItem(id){
-            cart = cart.filter(item => item.id !== id);
+            cart = cart.filter(item => item.id != id);
             this.setCartValues(cart);
             localStorage.setItem('cartt', JSON.stringify(cart));
     }
