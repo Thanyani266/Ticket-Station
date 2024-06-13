@@ -36,7 +36,7 @@
             <a class="nav-link text-uppercase tab-link" href="#" data-div="div-three">Vouchers</a>
           </div>
           <div class="navbar-nav justify-content-end">
-            <a class="nav-link rounded"><i class="fa-solid fa-cart-shopping tab-link" data-div="div-six"></i> <sup class="cart-items">3</sup> | R <span class="cart-total">45.78</span></a>
+            <a class="nav-link rounded"><i class="fa-solid fa-cart-shopping tab-link" data-div="div-six"></i> <sup class="cart-items">0</sup> | R <span class="cart-total">0</span></a>
           </div>
         </div>
             
@@ -52,19 +52,20 @@
         <div class="card-img-overlay mt-5">
           <h2 class="card-title text-center text-success fw-bold fs-1">Live More.</h2>
           <p class="card-text fs-4 text-center fw-bold"><a href="#" class="text-success text-decoration-none">Sign in</a> and we'll help you find events you'll like.</p>
+          
           <div class="input-group mx-auto w-50 mb-3">
-            <input type="text" class="form-control rounded-pill fs-5 p-2 me-2" placeholder=" Search for any event" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <input type="text" class="form-control rounded-pill fs-5 p-2 me-2" id="input-box" placeholder=" Search for any event" aria-label="Recipient's username" aria-describedby="basic-addon2" autocomplete="off">
             <div class="input-group-append">
-              <span class="input-group-text btn btn-outline-success fs-5 rounded-pill p-2 px-4" id="basic-addon2"><i class="fa-solid fa-magnifying-glass"></i></span>
+              <a class="nav-link tab-link search-btn" href="#" data-div="div-twelve"><span class="input-group-text btn btn-outline-success fs-5 rounded-pill p-2 px-4" id="basic-addon2"><i class="fa-solid fa-magnifying-glass"></i></span></a>
             </div>
           </div>
           <p class="card-text fs-5 text-center"><i class="fa-solid fa-location-dot text-secondary me-2"></i>To find events near you, set your location <a href="#" class="text-success text-decoration-none">here</a>.</p>
         </div>
-        </div>
+      </div>
       </div>
     
       <div> 
-        <div class="container items-container text-center my-3">
+      <div class="container items-container text-center my-3">
         <h1 class="text-start mx-2 mb-2"><i class="fa-regular fa-star text-success me-2"></i>Featured Events</h1> 
         <ul class="nav justify-content-center my-3">
           <li class="nav-item">
@@ -99,10 +100,10 @@
         
         
       <button class="btn btn-success fs-5 text-uppercase my-5">See more <i class="fa-solid fa-caret-down"></i></button>
-        </div>
+      </div>
 
-        <div class="signup-card">
-      <div class="card rounded-0" style="clip-path: polygon(0% 17%, 100% 1%, 100% 82%, 0% 99%);">
+      <div class="signup-card">
+        <div class="card rounded-0" style="clip-path: polygon(0% 17%, 100% 1%, 100% 82%, 0% 99%);">
           <img src="./images/1444345-best-white-background-wallpaper-images-1920x1200.jpg" class="card-img" alt="...">
           <div class="card-img-overlay text-center mt-5">
             <p class="text-center fs-1 fw-bold text-success"><i class="fa-regular fa-envelope"></i></p>
@@ -110,10 +111,10 @@
             <p class="card-text fs-3 text-center w-50 mx-auto text-muted">Sign-up for our weekly email newsletter so that you can be the first to know about the biggest events and the ones we think you <span class="fw-bold">personally would</span> like.</p>
             <button class="btn btn-outline-success fs-5 text-uppercase"><i class="fa-solid fa-check"></i> Sign up</button>
           </div>
-      </div>
         </div>
+      </div>
 
-        <div class="social-card border border-danger border-3">
+      <div class="social-card border border-danger border-3">
           <div class="card rounded-0">
             <div class="card-img-overlay text-center mt-5">
               <p class="text-center fs-1 text-success"><i class="fa-regular fa-face-smile"></i></p>
@@ -140,51 +141,72 @@
               </div>  
             </div>
           </div>
-        </div>
+      </div>
       </div>
     </div>
     <!-- Homepage Content-->
+
     <!-- Cart -->
-    <div class="cart container div-six content bg-danger my-5">
-      <span class="close-cart float-end">
-        <i class="fa-solid fa-x"></i>
-      </span>
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Item</th>
-              <th scope="col">Price</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Delete</th>
-            </tr>
-          </thead>
-          <tbody class="cart-content">
-            <tr>
-              <th scope="row">1</th>
-              <td>
-                  <img src="./images/panel_hotelskywebimageOLDNEW123.jpg" class="img-fluid" style="width: 20%;" alt="...">
-                  <span class="fw-bold text-reset fs-4 text-center">Jogging in the township</span>
-              </td>
-              <td class="fs-3 fw-bold text-muted">R 56.99</td>
-              <td><i class="fa-solid fa-minus bg-danger rounded text-white me-2 p-2"></i><span class="fs-4 text-secondary">1</span><i class="fa-solid fa-plus rounded text-white bg-success mx-2 p-2"></i></td>
-              <td><i class="fa-solid fa-trash text-danger fs-3 mt-2"></i></td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="cart container div-six content bg-light bg-opacity-25 my-5">
+      <div class="px-4 px-lg-0">
+    
+        <div class="pb-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 p-5 border-0 mb-5">
+      
+                <!-- Shopping cart table -->
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="border-0 bg-light">
+                          <div class="p-2 px-3 text-uppercase">Product</div>
+                        </th>
+                        <th scope="col" class="border-0 bg-light">
+                          <div class="py-2 text-uppercase">Price</div>
+                        </th>
+                        <th scope="col" class="border-0 bg-light">
+                          <div class="py-2 text-uppercase">Quantity</div>
+                        </th>
+                        <th scope="col" class="border-0 bg-light">
+                          <div class="py-2 text-uppercase">Remove</div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="cart-content">
+                      
+                    </tbody>
+                  </table>
+                </div>
+                <!-- End -->
+              </div>
+            </div>
+      
+            <div class="row py-5 p-4 bg-white border-0 shadow-sm">
+              <div class="col-lg-8 mx-auto">
+                <div class="card">
+                  <div class="card-body bg-danger bg-opacity-25 text-center">
+                    <span class="fs-5 fw-bold text-secondary">Subtotal: R<span class="cart-total-two">0</span></span>
+                  </div>
+                </div>
+                <div class="d-grid gap-2 my-3">
+                  <button class="btn btn-outline-success clear-cart" type="button">Clear Cart</button>
+                  <button class="btn btn-dark checkout" type="button">Checkout</button>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Cart -->
+
+    <!-- Search results box -->
+    <div class="result-box list-group">
+    </div>
+    <!-- Search results box -->
 
     <!-- Featured Events -->
     <div class="events-page div-two content">
@@ -744,6 +766,30 @@
     </div>
     <!-- Movies -->
 
+    <!-- Searched Events -->
+    <div class="events-page div-twelve content">
+      <nav class="navbar navbar-expand-lg border border-top border-3 border-danger bg-body-tertiary">
+        <div class="container clearfix">
+          <div class="text-uppercase d-inline-block float-start"><span class="result-length"></span> results from your search</div>
+          <div class="text-uppercase d-inline-block float-end"><span>Home</span><i class="fa-solid fa-arrow-right-long text-success mx-2"></i><span>Search Results</span></div>
+        </div>
+      </nav>
+      <div class="container row mx-auto py-4">
+        <div class="input-group mx-auto w-50 mb-3">
+          <input type="text" class="form-control rounded-pill fs-5 p-2 me-2" id="input-title" placeholder=" Search for any event" aria-label="Recipient's username" aria-describedby="basic-addon2" autocomplete="off" required>
+          <div class="input-group-append">
+            <span type="submit" class="input-group-text btn btn-outline-success fs-5 rounded-pill p-2 px-4 search-btn-two" id="basic-addon2"><i class="fa-solid fa-magnifying-glass"></i></span>
+          </div>
+        </div>
+        <div class="container">
+        <div class="row search-events" id="search-cards">
+          
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- Searched Events -->
+
     <!-- Vouchers -->
     <div class="vouchers-page div-three content">
       <div class="card rounded-0">
@@ -922,6 +968,6 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script type="module" src="main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

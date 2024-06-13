@@ -114,7 +114,9 @@ function changeFaIcon(anchor) {
 
 const cartItems = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
+const cartTotalTwo = document.querySelector('.cart-total-two');
 const cartContent = document.querySelector('.cart-content');  
+const clearCartBtn = document.querySelector('.clear-cart');  
 const featuredProducts = document.querySelector('.carousel');
 const featuredEvents = document.querySelector('.featured-events');
 const tourismEvents = document.querySelector('.tourism-events');
@@ -125,6 +127,7 @@ const moviesEvents = document.querySelector('.movies-events');
 const featuredVouchers = document.querySelector('.vouchers');
 const all_btns = document.querySelector('.btn-nn');
 const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const resultsBox = document.querySelector('.result-box');
 
 // testing
 document.querySelector('#featured-city').addEventListener("change", filterEventsByCity);
@@ -351,6 +354,15 @@ class Products {
             console.log(error);
         }
     }
+}
+
+// setting up shopping cart
+
+let sc = localStorage.getItem("cartt");
+if(sc){
+    cart = JSON.parse(localStorage.getItem("cartt"));
+}else{
+    cart = [];
 }
 
 // Display products
@@ -627,17 +639,230 @@ class UI {
         moviesEvents.innerHTML = moviesE;
         featuredVouchers.innerHTML = resultVouchers;
     }
+    searchEvents(products){
+        const availableKeywords = products.map(item => item.title);
+        const inputBox = document.querySelector('#input-box');
+        const inputTitle = document.querySelector('#input-title');
+
+        inputBox.onkeyup = () => {
+            let result = [];
+            let input = inputBox.value;
+            inputTitle.value = input;
+            if(input.length){
+                result = availableKeywords.filter(keyword => {
+                    return keyword.toLowerCase().includes(input.toLowerCase());
+                })
+                this.displayKeywords(result, products);
+            }
+        }
+
+        inputTitle.onkeyup = () => {
+            let result = [];
+            let input = inputTitle.value;
+            if(input.length){
+                result = availableKeywords.filter(keyword => {
+                    return keyword.toLowerCase().includes(input.toLowerCase());
+                })
+                this.displaySearchedEventsTwo(result, products);
+            }else{
+                result = [];
+                this.displaySearchedEventsTwo(result, products);
+            }
+        }
+    }
+    displayKeywords(result, products){
+        let content = "";
+        result.forEach(keyword => {
+            const genre = products.filter(product => product.title === keyword).map(product => product.genre);
+            const id = products.filter(product => product.title === keyword).map(product => product.id);
+            content +=  `<a href="../pages/details.html?genre=${genre}&id=${id}" class="list-group-item list-group-item-action">${keyword}</a>`;
+        });
+        this.displaySearchedEvents(result, products);
+        resultsBox.innerHTML = content;
+    }
+    displaySearchedEvents(result, products){
+        const searchedEvents = document.querySelector('.search-events');
+        const searchBtn = document.querySelector('.search-btn');
+        let searchedContent = "";
+        let searchedData = [];
+        for (let i = 0; i < result.length; i++) {
+            let data = products.filter(item => item.title === result[i])[0];
+            searchedData.push(data);
+        }
+        searchBtn.addEventListener("click", () => {
+            searchedData.forEach(item => {
+                searchedContent += `<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <a href="./pages/details.html?genre=${item.genre}&id=${item.id}" style="text-decoration:none;">
+                    <div class="card border-0 bg-success bg-opacity-25">
+                      <img src="./images/${item.img}" class="card-img-top" alt="...">
+                      <div class="card-img-overlay heartIcon text-end">
+                        <span onclick="changeFaIcon(this)" class="me-3 text-danger bg-white bg-opacity-50 rounded-pill fs-4 px-1">
+                          <i id="faHeart" class="fa-regular fa-heart"></i>
+                        </span>
+                      </div>
+                      <div class="card-body d-flex flex-column" style="height:250px;">
+                        <p class="text-muted text-uppercase fw-bold item-date">03 Jul 2024</p>
+                        <h5 class="card-title">${item.title}</h5>
+                        <p class="card-text">${item.venue}</p>
+                        <p class="card-text item-city">${item.city}</p>
+                        <div class="btn-nn"></div>
+                        <p class="card-text fs-5 text-secondary mt-auto">${item.price}</p>
+                      </div>
+                    </div>
+                </a>
+              </div>`
+            })
+            searchedEvents.innerHTML = searchedContent;
+            resultsBox.style.display = 'none';
+        })
+    }
+    displaySearchedEventsTwo(result, products){
+        const searchedEvents = document.querySelector('.search-events');
+        const searchBtnTwo = document.querySelector('.search-btn-two');
+        const resultLength = document.querySelector('.result-length');
+        let searchedContent = "";
+        let searchedData = [];
+        for (let i = 0; i < result.length; i++) {
+            let data = products.filter(item => item.title === result[i])[0];
+            searchedData.push(data);
+        }
+        
+        searchBtnTwo.addEventListener("click", () => {
+            searchedData.forEach(item => {
+                searchedContent += `<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <a href="./pages/details.html?genre=${item.genre}&id=${item.id}" style="text-decoration:none;">
+                    <div class="card border-0 bg-success bg-opacity-25">
+                      <img src="./images/${item.img}" class="card-img-top" alt="...">
+                      <div class="card-img-overlay heartIcon text-end">
+                        <span onclick="changeFaIcon(this)" class="me-3 text-danger bg-white bg-opacity-50 rounded-pill fs-4 px-1">
+                          <i id="faHeart" class="fa-regular fa-heart"></i>
+                        </span>
+                      </div>
+                      <div class="card-body d-flex flex-column" style="height:250px;">
+                        <p class="text-muted text-uppercase fw-bold item-date">03 Jul 2024</p>
+                        <h5 class="card-title">${item.title}</h5>
+                        <p class="card-text">${item.venue}</p>
+                        <p class="card-text item-city">${item.city}</p>
+                        <div class="btn-nn"></div>
+                        <p class="card-text fs-5 text-secondary mt-auto">${item.price}</p>
+                      </div>
+                    </div>
+                </a>
+              </div>`
+            })
+            searchedEvents.innerHTML = searchedContent;
+            resultLength.innerText = searchedData.length;
+        })
+    }
+    setCartValues(cart){
+        let tempTotal = 0;
+        let itemsTotal = 0;
+        let singleItemTotal = 0;
+        let singleTempTotal = 0;
+        cart.map(item => {
+            tempTotal += item.price * item.quantity;
+            itemsTotal += item.quantity;
+        })
+        cart.forEach(item => {
+            singleTempTotal += item.price * item.quantity;
+            singleItemTotal += item.quantity;
+        })
+        console.log(singleItemTotal, singleTempTotal);
+        cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
+        cartTotalTwo.innerText = parseFloat(tempTotal.toFixed(2));
+        cartItems.innerText = itemsTotal;
+    }
+    showCartItems(cart){
+        let resultItem = '';
+        cart.forEach(item => {
+
+            resultItem +=`
+            <tr>
+                <th scope="row">
+                    <div class="p-2">
+                        <img src="./images/${item.img}" alt="" width="70" class="img-fluid rounded shadow-sm">
+                        <div class="ml-3 d-inline-block align-middle">
+                            <h5 class="mb-0"><a href="#" class="text-muted text-decoration-none d-inline-block">${item.title}</a></h5><span class="text-muted font-weight-normal fst-italic">Category: ${item.genre}</span>
+                        </div>
+                    </div>
+                </th>
+                <td class="align-middle"><strong>R${item.price * item.quantity}</strong></td>
+                <td class="align-middle"><i class="fa-solid fa-minus text-success" data-id=${item.id}></i><strong class="mx-2">${item.quantity}</strong><i class="fa-solid fa-plus text-danger" data-id=${item.id}></i></td>
+                <td class="align-middle"><i class="fa fa-trash text-danger" data-id=${item.id}></i></td>
+            </tr>`;
+        });
+
+        cartContent.innerHTML = resultItem;
+    }
+    cartLogic(){
+        // clear cart button
+        clearCartBtn.addEventListener("click", () => {
+            this.clearCart();
+        });
+
+        // cart functionality
+        cartContent.addEventListener("click", event => {
+            if(event.target.classList.contains('fa-trash')){
+                let removeItem = event.target;
+                let id = removeItem.dataset.id;
+                cartContent.removeChild(removeItem.parentElement.parentElement);
+                this.removeCartItem(id);
+            }else if(event.target.classList.contains('fa-plus')){
+                let increaseQuantity = event.target;
+                let id = increaseQuantity.dataset.id;
+                let tempItem = cart.find(item => item.id == id);
+                tempItem.quantity = tempItem.quantity + 1;
+                localStorage.setItem('cartt', JSON.stringify(cart));
+                this.setCartValues(cart);
+                increaseQuantity.previousSibling.innerText = tempItem.quantity;
+            }else if(event.target.classList.contains('fa-minus')){
+                let decreaseQuantity = event.target;
+                let id = decreaseQuantity.dataset.id;
+                let tempItem = cart.find(item => item.id == id);
+                tempItem.quantity = tempItem.quantity - 1;
+                if(tempItem.quantity > 0){
+                    localStorage.setItem('cartt', JSON.stringify(cart));
+                    this.setCartValues(cart);
+                    decreaseQuantity.nextSibling.innerText = tempItem.quantity;
+                }else{
+                    cartContent.removeChild(decreaseQuantity.parentElement.parentElement);
+                    this.removeCartItem(id)
+                }
+            }
+        })
+    }
+    clearCart(){
+        let cartList = cart.map(item => item.id);
+        cartList.forEach(id => this.removeCartItem(id));
+        console.log(cartContent.children);
+        while (cartContent.children.length > 0) {
+            cartContent.removeChild(cartContent.children[0])
+        }
+    }
+    removeCartItem(id){
+            cart = cart.filter(item => item.id !== id);
+            this.setCartValues(cart);
+            localStorage.setItem('cartt', JSON.stringify(cart));
+    }
 }
 
 // Local storage
-class Storage {}
+class Storage {
+    
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     const ui = new UI();
     const products = new Products();
 
     // Get all products
-    products.getProducts().then(products => ui.displayProducts(products));
+    products.getProducts().then(products => {
+        ui.displayProducts(products);
+        ui.searchEvents(products);
+        ui.setCartValues(cart);
+        ui.showCartItems(cart);
+        ui.cartLogic();
+    });
 })
 
 /*

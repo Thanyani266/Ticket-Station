@@ -4,7 +4,7 @@
     {
         "id": 1,
         "title":"Iziko South African Museum", 
-        "price":"20 - 240",
+        "price":70,
         "date":"2024-05-26T09:00",
         "about": "The South African Museum, founded in 1825 and situated in the historic Company’s Gardens, has seen millions of visitors, attracted by the vast historical collection the museum has to offer, ranging from fossils to ancient insects and historical tools. A visit to this museum is not only culturally enriching, but the impressive natural collection will also ignite a spark of interest in learning more about the creatures with which we share our planet.",
         "genre":"Tourism",
@@ -26,7 +26,7 @@
     {
         "id": 3, 
         "title":"SKY-HI RIDE AT HOTEL SKY",
-        "price":"50 - 200",
+        "price":50,
         "date":"2024-05-30T12:00",
         "about":"If the idea of an exhilarating, gravity-defying, breath-taking drop reaching speeds of up to 100km/hr and 4G’s excites you then THIS is for you! Elevate your Hotel Sky experience with spectacular views and a thrilling ride. Situated as a prominent feature on the 28th floor of Hotel Sky, Sky-Hi Ride is a 35-meter thrill ride that takes you up in a chair lift, giving you a bird’s eye view of one of the most beautiful cities in the World – Cape Town. One of only three in the world, Sky High Ride extends 146 meters above the city bowl.",
         "genre":"Tourism",
@@ -146,7 +146,7 @@
     {
         "id": 13, 
         "title":"Hollywoodbets Top up voucher",
-        "price":"10 - 100",
+        "price":10,
         "date":"N/A",
         "about":"Hollywoodbets provides easy access to betting anytime, anywhere! Purchase a Holly Top Up Voucher to jump straight into the latest sports bets and games, everything from horse racing to our Live Games. Whether at home or away, Hollywoodbets is with you wherever you go. Ts and Cs apply.",
         "genre":"Vouchers",

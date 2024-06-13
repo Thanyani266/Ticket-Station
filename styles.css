@@ -185,6 +185,22 @@ a {
     justify-content: center;
 }
 
+.result-box {
+    position: absolute;
+    top: 414px;
+    margin-left: 28%;
+    width: 600px;
+    z-index: 1;
+}
+
+.result-box ul {
+    list-style: none;
+}
+
+.fa-minus, .fa-plus, .fa-trash{
+    cursor: pointer;
+}
+
 @media screen and (max-width: 900) {
     .wrapper .carousel {
         grid-auto-columns: calc((100% / 2) - 9px);

@@ -139,14 +139,24 @@
 
             if(JSON.parse(localStorage.getItem("cartt")) != null){
                 myArray = JSON.parse(localStorage.getItem("cartt"));
+                let bb = myArray.find(item => item.id === thisProduct.id);
+            
+                if(bb){
+                    addToCart.innerText = "In Cart";
+                    addToCart.disabled = true;
+                }else{
+                    addToCart.innerText = "Add To Cart";
+                    addToCart.disabled = false;
+                }
             }else{
                 myArray = [];
             }
-            
+
             function jimba(){
-                myArray.push(thisProduct);
+                myArray.push({...thisProduct, quantity: 1});
                 localStorage.setItem('cartt', JSON.stringify(myArray));
-                //window.location.href = "cart";
+                // refresh the page
+                window.location.reload();
             }
         }
     </script>
