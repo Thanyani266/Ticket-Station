@@ -1,84 +1,46 @@
 /*
     Carousel
 */
+// Carousel Variables
+let thumbnails = document.querySelector(".thumbnail");
+let slider = document.querySelector(".containe-r");
+let btnRight = document.querySelector("#slide-right");
+let btnLeft = document.querySelector("#slide-left");
 const wrapper = document.querySelector('.wrapper');
 const carousel = document.querySelector('.carousel');
-const arrowBtns = document.querySelectorAll('.wrapper i');
-const firstCardWidth = document.querySelector('.car-card').offsetWidth;
-const carouselChildren = [...carousel.children];
 
-let isDragging = false, startX, startScrollLeft, timeoutId;
-// Get the number of cards that can fit in the carousel at once
-let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+const triggers = document.querySelectorAll('li.filter-trigger');
+const users = document.querySelectorAll('.user');
+var all = document.querySelector('.reset')
 
-// Insert copies of the last few cards to the begining of the carousel for infinite scrolling
-carouselChildren.slice(-cardPerView).reverse().forEach(card => {
-    carousel.insertAdjacentHTML("afterbegin", card.outerHTML)
-});
-
-// Insert copies of the last few cards to the end of the carousel for infinite scrolling
-carouselChildren.slice(0, cardPerView).forEach(card => {
-    carousel.insertAdjacentHTML("beforeend", card.outerHTML)
-});
-
-// Add event listeners for the arrow buttons to scroll the carousel left and right
-arrowBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        carousel.scrollLeft += btn.id === 'left' ? -firstCardWidth : firstCardWidth;
-    })
-})
-
-const dragStart = (e) => {
-    isDragging = true;
-    carousel.classList.add('dragging');
-    // Records the initial cursor and scroll position of the carousel
-    startX = e.pageX;
-    startScrollLeft = carousel.scrollLeft;
+function clearActive() {
+  var activeLink = document.querySelector('.active');
+  activeLink.classList.remove("active");
 }
 
-const dragging = (e) => {
-    if(!isDragging) return; // If the dragging is false, return from here
-    // Updates the scroll position of the carousel based on the cursor movement
-    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-}
-
-const dragStop = () => {
-    isDragging = false;
-    carousel.classList.remove('dragging');
-}
-
-const autoPlay = () => {
-    if(window.innerWidth < 800) return; // Return if window is smaller than 800
-    // Auto play the carousel after every 2500 ms
-    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500)
-}
-
-autoPlay();
-
-const infiniteScroll = () => {
-    // If the carousel is at the begining, scroll to the end
-    if(carousel.scrollLeft < 1)  {
-        carousel.classList.add('no-transition');
-        carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
-        carousel.classList.remove('no-transition');
-    // If the carousel is at the end, scroll to the begining
-    }else if(carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth) {
-        carousel.classList.add('no-transition');
-        carousel.scrollLeft = carousel.offsetWidth;
-        carousel.classList.remove('no-transition');
+triggers.forEach(element => {
+  element.addEventListener('click', function() {
+    clearActive();
+    element.classList.add('active');
+    
+    let filter = element.dataset.filter;
+    console.log(filter);
+    
+    users.forEach(users => {
+      if(!users.classList.contains(filter)) {
+        users.classList.add('hide');
+      } else {
+        users.classList.remove('hide');
+      }
+    });
+    
+    if(filter === 'featured') {
+      users.forEach(users => {
+        users.classList.remove('hide');
+      })
     }
-
-    // Clear existing timeout and start auto play if mouse is not hovering over the carousel
-    clearTimeout(timeoutId);
-    if(!wrapper.matches(":hover")) autoPlay();
-}
-
-carousel.addEventListener('mousedown', dragStart);
-carousel.addEventListener('mousemove', dragging);
-document.addEventListener('mouseup', dragStop);
-carousel.addEventListener('scroll', infiniteScroll);
-wrapper.addEventListener("mouseenter", () => setTimeout(timeoutId));
-wrapper.addEventListener("mouseleave", autoPlay);
+  })
+});
 
 
 /* $(document).ready(function() {
@@ -118,7 +80,7 @@ const cartTotal = document.querySelector('.cart-total');
 const cartTotalTwo = document.querySelector('.cart-total-two');
 const cartContent = document.querySelector('.cart-content');  
 const clearCartBtn = document.querySelector('.clear-cart');  
-const featuredProducts = document.querySelector('.carousel');
+const featuredProducts = document.querySelector('.user-wrapper');
 const featuredEvents = document.querySelector('.featured-events');
 const tourismEvents = document.querySelector('.tourism-events');
 const musicEvents = document.querySelector('.music-events');
@@ -370,17 +332,18 @@ if(sc){
 class UI {
     displayProducts(products){
         let resultHome = '';
-        products.forEach(product => {
-
+        products?.forEach(product => {
             const d = new Date(product.date);
             const getDate = (d.getDate() < 10 ? '0' : '') + d.getDate();
             const monthName = month[d.getMonth()];
             const hour = (d.getHours() < 10 ? '0' : '') + d.getHours();
             const minutes = (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
             const time = `${hour}:${minutes}`;
-
+            
+            //if(product.genre === )
             resultHome +=`
-            <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
+            <div class="col-3 filterDiv ${product.genre}">
+             <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
             <div class="card">
               <div class="img">
                 <img src="./images/${product.img}" class="img-fluid" draggable="false" alt="">
@@ -390,7 +353,8 @@ class UI {
               <p>${product.venue}</p>
               <span class="card-text text-secondary fw-bold">${product.price}</span>
             </div>
-            </a>`;
+            </a>
+            </div>`;
         });
         let resultEvents = '';
         let tourismE = '';
@@ -892,4 +856,35 @@ function nextSlide(){
 document.querySelector('.next').addEventListener('click', e => {
     nextSlide();
 });
-*/
+
+
+let items = document.querySelectorAll('.carousel .carousel-item')
+
+items.forEach((el) => {
+    const minPerSlide = 1;
+    let next = el.nextElementSibling
+    for (var i=1; i<minPerSlide; i++) {
+        if (!next) {
+            // wrap carousel by using first child
+        	next = items[0]
+      	}
+        let cloneChild = next.cloneNode(true)
+        el.appendChild(cloneChild.children[0])
+        next = next.nextElementSibling
+    }
+}) */
+    let items = document.querySelectorAll('.carousel .carousel-item')
+
+    items.forEach((el) => {
+        const minPerSlide = 4
+        let next = el.nextElementSibling
+        for (var i=1; i<minPerSlide; i++) {
+            if (!next) {
+        // wrap carousel by using first child
+        next = items[0]
+    }
+    let cloneChild = next.cloneNode(true)
+    el.appendChild(cloneChild.children[0])
+    next = next.nextElementSibling
+}
+})

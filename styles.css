@@ -12,41 +12,94 @@ body{
     max-height: 600px;
 }
 
-/* ------------------------------------------------------------------------------------------------- */
-
-@media (max-width: 767px) {
-    .carousel-inner .carousel-item > div {
-        display: none;
-    }
-    .carousel-inner .carousel-item > div:first-child {
+/* Multi Cards Slide Carousel */
+.navbar {
+    list-style: none;
+    margin-top: 20px;
+    .filter-trigger {
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-bottom: 5px;
+      transition: all 0.5s;
+      position: relative;
+      
+      &:after {
+        content: '';
         display: block;
+        width: 100%;
+        height: 3px;
+        background-color: purple;
+        opacity: 0;
+        transition: all 0.3s;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      
+      &.active {
+        &:after {
+          opacity: 1;
+        }
+      }
+      
+      &:hover {
+        cursor: pointer;
+        
+        &:after {
+          opacity: 1;
+        }
+      }
     }
-}
-
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-    display: flex;
-}
-
-/* medium and up screens */
-@media (min-width: 768px) {
-
-    .carousel-inner .carousel-item-end.active,
-    .carousel-inner .carousel-item-next {
-        transform: translateX(25%);
+  }
+  
+  .user-wrapper {
+    margin-top: 50px;
+    .user {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s;
+      
+      &.hide {
+        opacity: 0;
+        top: 0;
+        left: 0;
+        transform: scale(0);
+        position: absolute;
+      }
     }
+  }
 
-    .carousel-inner .carousel-item-start.active, 
-    .carousel-inner .carousel-item-prev {
-        transform: translateX(-25%);
-    }
-}
 
-.carousel-inner .carousel-item-end,
-.carousel-inner .carousel-item-start { 
-    transform: translateX(0);
-}
+  
+/* ------------------------------------------RUBBISH-------------------------------------- */
+.filterDiv {
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  .btn1 {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .btn1:hover {
+    background-color: #ddd;
+  }
+  
+  .btn1.active {
+    background-color: #666;
+    color: white;
+  }
+/* ------------------------------------------RUBBISH-------------------------------------- */
+/* ------------------------------------------------------------------------------------------------- */
 
 .signup-card {
     filter: drop-shadow(10px 10px 10px gainsboro);

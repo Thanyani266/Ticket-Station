@@ -110,6 +110,40 @@
           </div>
         </div>
       </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div id="myBtnContainer">
+              <button class="btn1 active" onclick="filterSelection('all')"> Featured</button>
+              <button class="btn1" onclick="filterSelection('Music')"> Music</button>
+              <button class="btn1" onclick="filterSelection('Tourism')"> Tourism</button>
+              <button class="btn1" onclick="filterSelection('Theatre')"> Theatre</button>
+              <button class="btn1" onclick="filterSelection('Movies')"> Movies</button>
+            </div>
+          </div>
+          
+          <div class="col-12">
+            <div class="row user-wrapper container3">
+              
+            </div>
+          </div>
+          <!-- RUBBISH -->
+          <h2>Filter DIV Elements</h2>
+
+          <div id="myBtnContainer">
+            <button class="btn1 active" onclick="filterSelection('all')"> Featured</button>
+            <button class="btn1" onclick="filterSelection('Music')"> Music</button>
+            <button class="btn1" onclick="filterSelection('Tourism')"> Tourism</button>
+            <button class="btn1" onclick="filterSelection('Theatre')"> Theatre</button>
+            <button class="btn1" onclick="filterSelection('Movies')"> Movies</button>
+          </div>
+          
+          <div class="container5">
+          </div>
+          <!-- RUBBISH -->
+        </div>
+      </div> 
       
       <div class="social-card">
         <div class="card rounded-0 border-0">
@@ -961,7 +995,251 @@
       <!-- Footer -->
     </div>
 
+    <script>
+      let ghana = [  
+    {
+        "id": 1,
+        "title":"Iziko South African Museum", 
+        "price":70,
+        "date":"2024-05-26T09:00",
+        "about": "The South African Museum, founded in 1825 and situated in the historic Company’s Gardens, has seen millions of visitors, attracted by the vast historical collection the museum has to offer, ranging from fossils to ancient insects and historical tools. A visit to this museum is not only culturally enriching, but the impressive natural collection will also ignite a spark of interest in learning more about the creatures with which we share our planet.",
+        "genre":"Tourism",
+        "venue":"Iziko South African Museum, Queen Victoria Street, Gardens, Cape Town, South Africa",
+        "more_info":"https://www.iziko.org.za/",
+        "img":"panel_ISAM jpg_20230522_164638.jpg"
+    },
+    {
+        "id": 2, 
+        "title":"BACK TO BLACK (16 DLNPS)",
+        "price":90,
+        "date":"2024-05-26T11:45",
+        "about":"Directed: Sam Taylor-Johnson (Nowhere Boy) Starring: Marisa Abela (as Amy Winehouse), Jack O’Connell, Eddie Marsan, Lesley Manville. Her Music. Her Life. Her Legacy. Experience the life behind the lyrics, and witness the love story that inspired one of the greatest albums of all time, in this new biographical drama based on the life of British singer-songwriter, Amy Winehouse. Told through her eyes, and inspired by her deeply personal lyrics, the film explores the extraordinary story of her early rise to fame in Camden, and the tumultuous love story at the centre of her groundbreaking album, Back to Black, that catapulted her to global fame.",
+        "genre":"Tourism",
+        "venue":"Labia Theatre",
+        "more_info":"https://www.thelabia.co.za/",
+        "img":"panel_ph_171034009965f1b80313b77[1]_20240408_084510.jpg"
+    },  
+    {
+        "id": 3, 
+        "title":"SKY-HI RIDE AT HOTEL SKY",
+        "price":50,
+        "date":"2024-05-30T12:00",
+        "about":"If the idea of an exhilarating, gravity-defying, breath-taking drop reaching speeds of up to 100km/hr and 4G’s excites you then THIS is for you! Elevate your Hotel Sky experience with spectacular views and a thrilling ride. Situated as a prominent feature on the 28th floor of Hotel Sky, Sky-Hi Ride is a 35-meter thrill ride that takes you up in a chair lift, giving you a bird’s eye view of one of the most beautiful cities in the World – Cape Town. One of only three in the world, Sky High Ride extends 146 meters above the city bowl.",
+        "genre":"Tourism",
+        "venue":"Hotel Sky, CNR Lower Long & Walter Sisulu Ave",
+        "city":"Cape Town",
+        "more_info":"http://www.sky-hiride.capetown/",
+        "img":"panel_hotelskywebimageOLDNEW123.jpg"
+    }, 
+    {
+        "id": 4, 
+        "title":"THE HOLDOVERS (16 DLP)",
+        "price":90,
+        "date":"2024-05-28T13:30",
+        "about":"Directed: Alexander Payne ( Sideways, The Descendants). Starring: Paul Giamatti, Da’Vine Joy Randolph, Dominic Sessa.Nominated for 5 Oscars including Best Film. One of the top 10 films of 2023 : National Board of Review Nominated for 3 Golden Globes including Best Film Musical or Comedy Discomfort and Joy. Set in 1970, the acclaimed comedy drama, follows a bad tempered history lecturer at a New England boarding school, who remains on campus during the Christmas break, to chaperone a handful of students with nowhere to go.",
+        "genre":"Movies",
+        "venue":"The Labia Theatre",
+        "city":"Cape Town",
+        "more_info":"https://www.thelabia.co.za/",
+        "img":"panel_approved_images_-_giamatti_&_sessa[1]_20240205_081614.jpg"
+    },  
+    {
+        "id": 5, 
+        "title":"Zeitz MOCAA",
+        "price":250,
+        "date":"2024-05-26T09:00",
+        "about":"As an institution committed to making a significant contribution to the development of contemporary art in Africa and its diaspora, Zeitz MOCAA features rotating temporary exhibitions and a dedicated space for its permanent Zeitz MOCAA Collection. The institution also supports educational, discursive and enrichment programmes related to its exhibitions as well as a Centre for Art Education and a project space for emerging artists. Zeitz MOCAA is open Monday to Sunday from 10am to 6pm. African Citizens can enjoy FREE entry on Africa Wednesdays, every week between 10am to 1pm, on presentation of a valid ID/Passport. Visit our website for more on our 2024 Gala.",
+        "genre":"Tourism",
+        "venue":"Zeitz Museum of Contemporary Art Africa",
+        "city":"Cape Town",
+        "more_info":"https://zeitzmocaa.museum/",
+        "img":"panel_Zeitz_Exterior_13_cr Wianelle Briers_Belmond Southern Africa newsletter_20231129_124324.jpg"
+    },  
+    {
+        "id": 6, 
+        "title":"Cape Town Abseil",
+        "price":850,
+        "date":"2024-05-26",
+        "about":"Welcome to Cape Town Abseil, the ultimate adventure activity for thrill-seekers looking to experience the beauty of Cape Town from a whole new perspective. Our abseiling experience is not only exhilarating, but also safe and professionally guided. With over 20 years of experience in the industry, we offer an unforgettable experience that will leave you with memories to last a lifetime.",
+        "genre":"Tourism",
+        "venue":"Table Mountain",
+        "city":"Cape Town",
+        "more_info":"https://www.capetownabseil.co.za",
+        "img":"panel_DSC06292_20230725_105701.jpg"
+    }, 
+    {
+        "id": 7, 
+        "title":"Morning Melodies 2024",
+        "price":80,
+        "date":"2024-05-31T10:30",
+        "about":"Morning Melodies is a programme that focuses on presenting professional and affordable morning concerts to the senior citizens of the Western Cape.",
+        "genre":"Music",
+        "venue":"Concert Hall - Baxter Theatre Centre",
+        "city":"Cape Town",
+        "more_info":"http://www.baxter.co.za/",
+        "img":"panel_Morning Melodies Webtickets image_20230814_115649.jpg"
+    },  
+    {
+        "id": 8, 
+        "title":"Voces Cordis ENDLER (conducted by André van der Merwe)",
+        "price":175,
+        "date":"2024-05-29T19:00",
+        "about":"Voces Cordis, established in 2022 under the baton of André van der Merwe, presents a varied programme of old and new choral music. Classical repertoire by Renaissance and Romantic composers are presented in tandem with new arrangements of popular songs.",
+        "genre":"Music",
+        "venue":"ENDLER",
+        "city":"Stellenbosch",
+        "more_info":"N/A",
+        "img":"panel_Voces - JPG_20240227_115644.jpg"
+    },  
+    {
+        "id": 9, 
+        "title":"FAB Wedding Sale 2024",
+        "price":60,
+        "date":"2024-06-20T10:00",
+        "about":"FAB WEDDING SALE: One-Day Extravaganza! Come and fit 8 Dress Designers Under One Roof for only R60.00! Saving you lots of time and money! Time: 10:00 AM - 5:00 PM Don't miss out on the second edition of the FAB WEDDING SALE at Venue D’Aria, Durbanville. Mark your calendars and join us for a day filled with savings and wedding inspiration! What to Expect: Categories: Wedding Dresses, Makeup, Hair, Jewellery, Accessories, photographers and more! Dining: Enjoy delicious food and wine at our onsite restaurant. Barista: Energize your shopping spree with expertly crafted coffee. Private Fitting Rooms: Experience personalized fittings with each designer. Bridal Party Photography: Capture unforgettable moments with professional photoshoots.",
+        "genre":"Fashion",
+        "venue":"D’Aria",
+        "city":"Durbanville",
+        "more_info":"N/A",
+        "img":"panel_Expo_Day_20240426_135004.jpg"
+    }, 
+    {
+        "id": 10, 
+        "title":"Wednesday Waves",
+        "price":120,
+        "date":"2024-05-27T18:15",
+        "about":"The intention with Wednesday Waves is to hold a safe space for you to dance into deeper awareness and communion / connection with yourself (and each other) and with whatever is moving in you. Each person will have different needs and different experiences and each dancer is ultimately responsible for their willingness to step into the practice, but as facilitators our role is to make that just a bit easier for you.",
+        "genre":"Music",
+        "venue":"Simon's Town Town Hall, Simon's Town",
+        "city":"Cape Town",
+        "more_info":"N/A",
+        "img":"panel_Wednesday_Waves_20230424_131248.jpg"
+    },  
+    {
+        "id": 11, 
+        "title":"Buzani Ku Bawo",
+        "price":80,
+        "date":"2024-05-26T10:30",
+        "about":"Apha u Mnu Thamsanqa ubonakalisa amandla alento kuthiwa luthando. Ukuba apho luthe lwamiliselwa khona akekho onokuluncothula. Sesinye sezipho esanikwa umntu. Ukuba uzama ukohlula abo bathandanayo uzifaka engozini. Ufaka nabanye abantu kulengozi kuba ulwa nesipho esivela kuThixo. Kananjalo abanye bathi basebenzise isiko ukubonakalisa umahluko wezimvo kubantu abadala nesizukulwana esitsha. Kanti ke lento ilisiko liyabola, libeyityhefu, lingasebenzi kwezinye izinto. Uthi ke wena usakuhlakaza uvumbulule okokubola kungalungi njengoko enzile u Zwilakhe kwelibali libuhlungu kangakanana.",
+        "genre":"Theatre",
+        "venue":"Artscape, Theatre",
+        "city":"Cape Town",
+        "more_info":"https://www.artscape.co.za/",
+        "img":"panel_Buzani 2017© Bronwyn Lloyd0G4B9284 (1)_20240228_121048.jpg"
+    },  
+    {
+        "id": 12, 
+        "title":"Kirstenbosch Botanical Garden",
+        "price":220,
+        "date":"2024-05-25T18:00",
+        "about":"Enjoy the beauty and diversity of South Africa's extraordinary indigenous flora in the magnificent landscape of Kirstenbosch National Botanical Garden.",
+        "genre":"Tourism",
+        "venue":"Kirstenbosch, Cape Town",
+        "city":"Cape Town",
+        "more_info":"http://www.sanbi.org/gardens/kirstenbosch",
+        "img":"panel_KIRSTENBOSCH Protea Garden King Protea Aug-Sep ALN 041 1110x740px.jpg"
+    },
+    {
+        "id": 13, 
+        "title":"Hollywoodbets Top up voucher",
+        "price":10,
+        "date":"N/A",
+        "about":"Hollywoodbets provides easy access to betting anytime, anywhere! Purchase a Holly Top Up Voucher to jump straight into the latest sports bets and games, everything from horse racing to our Live Games. Whether at home or away, Hollywoodbets is with you wherever you go. Ts and Cs apply.",
+        "genre":"Vouchers",
+        "venue":"Online",
+        "city":"RSA",
+        "more_info":"N/A",
+        "img":"panel_Hollywood BetsV22021.jpg"
+    },
+    {
+        "id": 14, 
+        "title":"Hello! It’s Me, Kitchen and Bar Vouchers",
+        "price":200,
+        "date":"N/A",
+        "about":"We do contemporary food that meets an array of dietary requirements, in a beautifully curated space, with incredible outdoor seating and “grab and go” options. Besides our foodie options, we make a great cuppa and overall quality, artisanal coffee. Our farmacy health bar offers fresh smoothies & juices; our drinks menu features ‘beyond ordinary’ cocktails and our food is just incredible!",
+        "genre":"Vouchers",
+        "venue":"Hello It’s Me | Kitchen & Bar, 254 Main Rd, Walmer",
+        "city":"Port Elizabeth",
+        "more_info":"https://www.helloitsme.co.za",
+        "img":"panel_KIRSTENBOSCH Protea Garden King Protea Aug-Sep ALN 041 1110x740px.jpg"
+    },
+    {
+        "id": 15, 
+        "title":"Chingadas Voucher",
+        "price":250,
+        "date":"N/A",
+        "about":"Hola Amigos! Chingadas is a Mexican Cantina where you can grab your favourite Mexican meal or a delicious Margarita! For more information on voucher purchases and bookings, please contact Arina on 072 834 9739 or via email GM@chingadasct.co.za",
+        "genre":"Vouchers",
+        "venue":"50 Orange Street, Gardens",
+        "city":"Cape Town",
+        "more_info":"N/A",
+        "img":"panel_CMC CT - JPG_20240423_132717.jpg"
+    }    
+]
+      
+      const container5 = document.querySelector('.user-wrapper1');
+      let resultGhana = '';
+      ghana.forEach(product => {
+        resultGhana +=`
+        <div class="col-3 filterDiv ${product.genre}">
+          <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
+            <div class="card">
+              <img src="./images/${product.img}" class="card-img-top" alt="${product.title} image">
+              <div class="card-body">
+                <h5 class="card-title">${product.title}</h5>
+                <p class="card-text">${product.date}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </a>
+        </div>`;
+      }) 
 
+      container5.innerHTML = resultGhana;
+
+      filterSelection("all")
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+      
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+      }
+      
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+      
+      /* Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn1");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      } */
+      </script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
