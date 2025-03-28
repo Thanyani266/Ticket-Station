@@ -331,30 +331,60 @@ if(sc){
 // Display products
 class UI {
     displayProducts(products){
+
+        const categoryMap = {};
+    
+        // Group products by genre
+        products.forEach(product => {
+            if (!categoryMap[product.genre]) {
+                categoryMap[product.genre] = [];
+            }
+            if (categoryMap[product.genre].length < 4) {
+                categoryMap[product.genre].push(product);
+            }
+        });
+
+        const defaultFeatured = [];
+
+        // Pick one from each category to build a 4-item "featured" set
+        Object.keys(categoryMap).forEach(genre => {
+            if (categoryMap[genre][0]) {
+                defaultFeatured.push(categoryMap[genre][0]);
+            }
+        });
+    
+        // Limit to max 4 default featured
+        const featuredItems = defaultFeatured.slice(0, 4);
+
         let resultHome = '';
-        products?.forEach(product => {
+        Object.keys(categoryMap).forEach(genre => {
+        categoryMap[genre].forEach(product => {
             const d = new Date(product.date);
             const getDate = (d.getDate() < 10 ? '0' : '') + d.getDate();
             const monthName = month[d.getMonth()];
             const hour = (d.getHours() < 10 ? '0' : '') + d.getHours();
             const minutes = (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
             const time = `${hour}:${minutes}`;
+
+            // Check if this product is one of the featured defaults
+            const isFeatured = featuredItems.includes(product) ? 'featured' : '';
             
             //if(product.genre === )
             resultHome +=`
-            <div class="col-3 filterDiv ${product.genre}">
+            <div class="col-3 filterDiv ${product.genre} ${isFeatured}">
              <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
-            <div class="card">
+            <div class="card kard">
               <div class="img">
                 <img src="./images/${product.img}" class="img-fluid" draggable="false" alt="">
               </div>
               <h6 class="card-text text-muted fw-bold text-uppercase mt-2">From ${getDate} ${monthName} ${new Date(product.date).getFullYear()} ${time}</h6>
               <span class="card-title fw-bold fs-5">${product.title}</span>
               <p>${product.venue}</p>
-              <span class="card-text text-secondary fw-bold">${product.price}</span>
+              <span class="card-text text-secondary fw-bold">R ${product.price}</span>
             </div>
             </a>
             </div>`;
+        });
         });
         let resultEvents = '';
         let tourismE = '';
@@ -606,6 +636,31 @@ class UI {
         moviesEvents.innerHTML = moviesE;
         featuredVouchers.innerHTML = resultVouchers;
     }
+    filterSelection(c) {
+        let x = document.getElementsByClassName("filterDiv");
+        if (c === "all") c = "";
+        for (let i = 0; i < x.length; i++) {
+            this.w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) {
+                this.w3AddClass(x[i], "show");
+            }
+        }
+    }
+
+    w3AddClass(element, name) {
+        let arr = element.className.split(" ");
+        if (arr.indexOf(name) === -1) {
+            element.className += " " + name;
+        }
+    }
+
+    w3RemoveClass(element, name) {
+        let arr = element.className.split(" ");
+        while (arr.indexOf(name) > -1) {
+            arr.splice(arr.indexOf(name), 1);
+        }
+        element.className = arr.join(" ");
+    }
     searchEvents(products){
         const availableKeywords = products.map(item => item.title);
         const inputBox = document.querySelector('#input-box');
@@ -818,6 +873,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // Get all products
     products.getProducts().then(products => {
         ui.displayProducts(products);
+        ui.filterSelection("featured");
+        // Add event listeners to filter buttons
+        document.querySelectorAll("#myBtnContainer1 .btn1").forEach(button => {
+            button.addEventListener("click", function () {
+            // Remove 'active' class from all buttons
+            document.querySelectorAll("#myBtnContainer1 .btn1").forEach(btn => btn.classList.remove("active"));
+            // Add 'active' class to the clicked button
+            this.classList.add("active");
+
+            const category = this.getAttribute("data-filter");
+            ui.filterSelection(category);
+            });
+        });
         ui.searchEvents(products);
         ui.setCartValues(cart);
         ui.showCartItems(cart);
@@ -873,18 +941,3 @@ items.forEach((el) => {
         next = next.nextElementSibling
     }
 }) */
-    let items = document.querySelectorAll('.carousel .carousel-item')
-
-    items.forEach((el) => {
-        const minPerSlide = 4
-        let next = el.nextElementSibling
-        for (var i=1; i<minPerSlide; i++) {
-            if (!next) {
-        // wrap carousel by using first child
-        next = items[0]
-    }
-    let cloneChild = next.cloneNode(true)
-    el.appendChild(cloneChild.children[0])
-    next = next.nextElementSibling
-}
-})
