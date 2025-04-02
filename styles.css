@@ -51,6 +51,10 @@ body{
       }
     }
   }
+
+  nav .user-name, #logoutBtn {
+    display: none;
+  }
   
   .user-wrapper {
     margin-top: 50px;

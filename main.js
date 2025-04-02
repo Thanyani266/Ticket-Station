@@ -330,6 +330,47 @@ if(sc){
 
 // Display products
 class UI {
+    constructor() {
+        this.hardcodedUser = {
+            username: "admin",
+            password: "password123"
+        };
+    }
+
+    checkLoginStatus() {
+        const loggedInUser = localStorage.getItem("loggedInUser");
+        if (loggedInUser) {
+            this.showDashboard(loggedInUser);
+        }
+    }
+
+    login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (username === this.hardcodedUser.username && password === this.hardcodedUser.password) {
+            localStorage.setItem("loggedInUser", username);
+            location.reload(); // Reload the page after successful login
+        } else {
+            alert("Invalid username or password!");
+        }
+    }
+
+    logout() {
+        localStorage.removeItem("loggedInUser");
+        document.querySelector(".user-name").style.display = "none";
+        document.querySelector(".log-in").style.display = "block";
+        document.querySelector("#logoutBtn").style.display = "none";
+    }
+
+    showDashboard(username) {
+        document.querySelector(".user-name").style.display = "block";
+        document.querySelector("#logoutBtn").style.display = "block";
+        document.querySelector(".log-in").style.display = "none";
+        document.querySelector("body").style.display = "block";
+        document.getElementById("user").innerText = username;
+    }
+
     displayProducts(products){
 
         const categoryMap = {};
@@ -869,6 +910,11 @@ class Storage {
 document.addEventListener("DOMContentLoaded", () => {
     const ui = new UI();
     const products = new Products();
+    ui.checkLoginStatus();
+
+    // Attach login and logout to buttons
+    document.getElementById("loginBtn").addEventListener("click", () => ui.login());
+    document.getElementById("logoutBtn").addEventListener("click", () => ui.logout());
 
     // Get all products
     products.getProducts().then(products => {
