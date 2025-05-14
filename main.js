@@ -434,7 +434,7 @@ class UI {
         let theatreE = '';
         let moviesE = '';
         
-        products.forEach(product => {
+        products.filter(value => value.genre !== "Vouchers").forEach(product => {
             //newEventsElm.href = `./pages/details.html?id=${product.id}`;
             //document.querySelector('a').style.textDecoration = 'none';
             //newEventsElm.innerHTML = 'Ghjst';
@@ -468,7 +468,7 @@ class UI {
                   </a>
                 </div>`;
         });
-        products.filter(value => value.genre === "Tourism").forEach(product => {
+        products.filter(value => value.genre === "Tourism" && value.genre !== "Vouchers").forEach(product => {
             //newEventsElm.href = `./pages/details.html?id=${product.id}`;
             //document.querySelector('a').style.textDecoration = 'none';
             //newEventsElm.innerHTML = 'Ghjst';
@@ -502,7 +502,7 @@ class UI {
                   </a>
                 </div>`;
         });
-        products.filter(value => value.genre === "Music").forEach(product => {
+        products.filter(value => value.genre === "Music" && value.genre !== "Vouchers").forEach(product => {
             //newEventsElm.href = `./pages/details.html?id=${product.id}`;
             //document.querySelector('a').style.textDecoration = 'none';
             //newEventsElm.innerHTML = 'Ghjst';
@@ -536,7 +536,7 @@ class UI {
                   </a>
                 </div>`;
         });
-        products.filter(value => value.genre === "Festival").forEach(product => {
+        products.filter(value => value.genre === "Festival" && value.genre !== "Vouchers").forEach(product => {
             //newEventsElm.href = `./pages/details.html?id=${product.id}`;
             //document.querySelector('a').style.textDecoration = 'none';
             //newEventsElm.innerHTML = 'Ghjst';
@@ -569,7 +569,7 @@ class UI {
                   </a>
                 </div>`;
         });
-        products.filter(value => value.genre === "Theatre").forEach(product => {
+        products.filter(value => value.genre === "Theatre" && value.genre !== "Vouchers").forEach(product => {
             //newEventsElm.href = `./pages/details.html?id=${product.id}`;
             //document.querySelector('a').style.textDecoration = 'none';
             //newEventsElm.innerHTML = 'Ghjst';
@@ -603,7 +603,7 @@ class UI {
                   </a>
                 </div>`;
         });
-        products.filter(value => value.genre === "Movies").forEach(product => {
+        products.filter(value => value.genre === "Movies" && value.genre !== "Vouchers").forEach(product => {
             //newEventsElm.href = `./pages/details.html?id=${product.id}`;
             //document.querySelector('a').style.textDecoration = 'none';
             //newEventsElm.innerHTML = 'Ghjst';
