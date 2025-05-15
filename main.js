@@ -412,7 +412,7 @@ class UI {
             
             //if(product.genre === )
             resultHome +=`
-            <div class="col-3 filterDiv ${product.genre} ${isFeatured}">
+            <div class="col-lg-3 col-md-4 col-sm-6 filterDiv ${product.genre} ${isFeatured}">
              <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
             <div class="card kard">
               <div class="img">

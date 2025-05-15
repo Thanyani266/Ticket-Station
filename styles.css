@@ -8,8 +8,137 @@ body{
 }
 
 .search-card {
-    filter: drop-shadow(10px 10px gainsboro);
-    max-height: 600px;
+  filter: drop-shadow(10px 10px gainsboro);
+}
+
+.search-card .card {
+  height: 420px;
+}
+
+.search-card .card .input-group {
+  width: 70%;
+} 
+
+.search-card .card img{
+    width: auto; /* adjusts width proportionally */
+    height: 100%; /* makes the image fit the height of the container */
+    object-fit: cover; /* maintains aspect ratio, scales image, and may clip it */
+    display: block; /* removes default inline spacing */
+}
+
+.signup-card .card .card-text1{
+  display: none;
+}
+
+.clipped-div {
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+
+.clipped-div2 {
+  clip-path: polygon(0 17%, 100% 0, 100% 82%, 0 99%);
+}
+
+/* Tablet styles (applies to widths 601px - 900px) */
+@media screen and (max-width: 800px) {
+  .signup-card .card .card-title{
+    font-size: 25px !important;
+  }
+  .signup-card .card .card-text{
+    font-size: 18px !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .clipped-div {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .clipped-div2 {
+    clip-path: polygon(0 17%, 100% 0, 100% 100%, 0 99%);
+  }
+  .search-card .card {
+    height: 350px;
+  }
+}
+
+/* Mobile styles (applies to widths of 600px or less) */
+@media screen and (max-width: 600px) {
+  .search-card .card .input-group {
+    width: 90%;
+  }
+  .search-card .card {
+    height: 390px;
+  }
+  .signup-card .card .card-title{
+    font-size: 20px !important;
+  }
+  .signup-card .card .card-text{
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container3{
+    padding: 0 20%;
+    margin-bottom: 10% !important;
+  }
+  .clipped-div2 {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .signup-card .card div{
+    margin-top: 0 !important;
+  }
+  .signup-card .card .card-title{
+    display: none;
+  }
+  .signup-card .card button{
+    font-size: 16px !important;
+  }
+}
+@media screen and (max-width: 430px) {
+  .signup-card .card button{
+    font-size: 12px !important;
+  }
+  .signup-card .card .card-text{
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .search-card .card {
+    height: 420px;
+  }
+  .container3{
+    padding: 0 5%;
+  }
+}
+@media screen and (max-width: 370px) {
+  .signup-card .card .card-text{
+    font-size: 10px !important;
+  }
+  .signup-card .card button{
+    font-size: 8px !important;
+  }
+}
+@media screen and (max-width: 300px) {
+  .search-card .card {
+    height: 450px;
+  }
+  .signup-card .card .card-text{
+    display: none;
+  }
+  .signup-card .card .card-text1{
+    display: block;
+    width: 100% !important;
+    font-size: 10px !important;
+  }
+}
+@media screen and (max-width: 225px) {
+  .search-card .card {
+    height: 500px;
+  }
+  .signup-card .card .card-text1{
+    font-size: 8px !important;
+  }
+  .signup-card .card button{
+    font-size: 5px !important;
+  }
 }
 
 /* Multi Cards Slide Carousel */
@@ -119,6 +248,13 @@ body{
 
 .signup-card img {
     max-height: 500px;
+}
+
+.signup-card .card .card-img{
+  width: auto; /* adjusts width proportionally */
+  height: 100%; /* makes the image fit the height of the container */
+  object-fit: cover; /* maintains aspect ratio, scales image, and may clip it */
+  display: block; /* removes default inline spacing */
 }
 
 
