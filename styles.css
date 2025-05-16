@@ -91,6 +91,24 @@ body{
   .signup-card .card button{
     font-size: 16px !important;
   }
+  .featured-events{
+    padding: 0 20%;
+  }
+  .tourism-events{
+    padding: 0 20%;
+  }
+  .music-events{
+    padding: 0 20%;
+  }
+  .festival-events{
+    padding: 0 20%;
+  }
+  .theatre-events{
+    padding: 0 20%;
+  }
+  .movies-events{
+    padding: 0 20%;
+  }
 }
 @media screen and (max-width: 430px) {
   .signup-card .card button{
@@ -98,6 +116,24 @@ body{
   }
   .signup-card .card .card-text{
     font-size: 14px !important;
+  }
+  .featured-events{
+    padding: 0;
+  }
+  .tourism-events{
+    padding: 0;
+  }
+  .music-events{
+    padding: 0;
+  }
+  .festival-events{
+    padding: 0;
+  }
+  .theatre-events{
+    padding: 0;
+  }
+  .movies-events{
+    padding: 0;
   }
 }
 @media screen and (max-width: 400px) {
@@ -240,6 +276,15 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 1);
+}
+
+.venue-text{
+  text-shadow: 1px 1px blueviolet;
+}
+
+.kard:hover{
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.75);
 }
   
 .signup-card {

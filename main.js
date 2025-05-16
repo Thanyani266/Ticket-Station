@@ -447,26 +447,19 @@ class UI {
             const time = `${hour}:${minutes}`;
             
             resultEvents +=`
-            <div class="col-md-4 mb-3">
-            <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
-                  <div class="card border-0 bg-success bg-opacity-25">
-                    <img src="./images/${product.img}" class="card-img-top" alt="...">
-                    <div class="card-img-overlay heartIcon text-end">
-                      <span onclick="changeFaIcon(this)" class="me-3 text-danger bg-white bg-opacity-50 rounded-pill fs-4 px-1">
-                        <i id="faHeart" class="fa-regular fa-heart"></i>
-                      </span>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-3">
+                <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
+                    <div class="card kard rounded-0 bg-warning bg-opacity-25">
+                        <div class="img">
+                            <img src="./images/${product.img}" class="img-fluid" draggable="false" alt="">
+                        </div>
+                        <h6 class="card-text text-light text-center bg-dark bg-opacity-50 fw-bold text-uppercase mt-2">From ${getDate} ${monthName} ${new Date(product.date).getFullYear()} ${time}</h6>
+                        <span class="card-title text-center fw-bold fs-5">${product.title}</span>
+                        <p class="text-center venue-text">${product.venue}</p>
+                        <span class="card-text text-center bg-white bg-opacity-50 text-secondary fw-bold">R ${product.price}</span>
                     </div>
-                    <div class="card-body d-flex flex-column" style="height:250px;">
-                      <p class="text-muted text-uppercase fw-bold item-date">From ${getDate} ${monthName} ${new Date(product.date).getFullYear()} ${time}</p>
-                      <h5 class="card-title">${product.title}</h5>
-                      <p class="card-text">${product.venue}</p>
-                      <p class="card-text item-city">${product.city}</p>
-                      <div class="btn-nn"></div>
-                      <p class="card-text fs-5 text-secondary mt-auto">${product.price}</p>
-                    </div>
-                  </div>
-                  </a>
-                </div>`;
+                </a>
+            </div>`;
         });
         products.filter(value => value.genre === "Tourism" && value.genre !== "Vouchers").forEach(product => {
             //newEventsElm.href = `./pages/details.html?id=${product.id}`;
@@ -481,26 +474,19 @@ class UI {
             const time = `${hour}:${minutes}`;
             
             tourismE +=`
-            <div class="col-md-4 mb-3">
-            <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
-                  <div class="card border-0 bg-success bg-opacity-25">
-                    <img src="./images/${product.img}" class="card-img-top" alt="...">
-                    <div class="card-img-overlay heartIcon text-end">
-                      <span onclick="changeFaIcon(this)" class="me-3 text-danger bg-white bg-opacity-50 rounded-pill fs-4 px-1">
-                        <i id="faHeart" class="fa-regular fa-heart"></i>
-                      </span>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-3">
+                <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
+                    <div class="card kard rounded-0 bg-success bg-opacity-25">
+                        <div class="img">
+                            <img src="./images/${product.img}" class="img-fluid" draggable="false" alt="">
+                        </div>
+                        <h6 class="card-text text-light text-center bg-dark bg-opacity-50 fw-bold text-uppercase mt-2">From ${getDate} ${monthName} ${new Date(product.date).getFullYear()} ${time}</h6>
+                        <span class="card-title text-center fw-bold fs-5">${product.title}</span>
+                        <p class="text-center venue-text">${product.venue}</p>
+                        <span class="card-text text-center bg-white bg-opacity-50 text-secondary fw-bold">R ${product.price}</span>
                     </div>
-                    <div class="card-body d-flex flex-column" style="height:250px;">
-                      <p class="text-muted text-uppercase fw-bold item-date">From ${getDate} ${monthName} ${new Date(product.date).getFullYear()} ${time}</p>
-                      <h5 class="card-title">${product.title}</h5>
-                      <p class="card-text">${product.venue}</p>
-                      <p class="card-text item-city">${product.city}</p>
-                      <div class="btn-nn"></div>
-                      <p class="card-text fs-5 text-secondary mt-auto">${product.price}</p>
-                    </div>
-                  </div>
-                  </a>
-                </div>`;
+                </a>
+            </div>`;
         });
         products.filter(value => value.genre === "Music" && value.genre !== "Vouchers").forEach(product => {
             //newEventsElm.href = `./pages/details.html?id=${product.id}`;
@@ -515,26 +501,19 @@ class UI {
             const time = `${hour}:${minutes}`;
             
             musicE +=`
-            <div class="col-md-4 mb-3">
-            <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
-                  <div class="card border-0 bg-success bg-opacity-25">
-                    <img src="./images/${product.img}" class="card-img-top" alt="...">
-                    <div class="card-img-overlay heartIcon text-end">
-                      <span onclick="changeFaIcon(this)" class="me-3 text-danger bg-white bg-opacity-50 rounded-pill fs-4 px-1">
-                        <i id="faHeart" class="fa-regular fa-heart"></i>
-                      </span>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-3">
+                <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
+                    <div class="card kard rounded-0 bg-info bg-opacity-25">
+                        <div class="img">
+                            <img src="./images/${product.img}" class="img-fluid" draggable="false" alt="">
+                        </div>
+                        <h6 class="card-text text-light text-center bg-dark bg-opacity-50 fw-bold text-uppercase mt-2">From ${getDate} ${monthName} ${new Date(product.date).getFullYear()} ${time}</h6>
+                        <span class="card-title text-center text-center fw-bold fs-5">${product.title}</span>
+                        <p class="text-center venue-text">${product.venue}</p>
+                        <span class="card-text text-center bg-white bg-opacity-50 text-secondary fw-bold">R ${product.price}</span>
                     </div>
-                    <div class="card-body d-flex flex-column" style="height:250px;">
-                      <p class="text-muted text-uppercase fw-bold item-date">From ${getDate} ${monthName} ${new Date(product.date).getFullYear()} ${time}</p>
-                      <h5 class="card-title">${product.title}</h5>
-                      <p class="card-text">${product.venue}</p>
-                      <p class="card-text item-city">${product.city}</p>
-                      <div class="btn-nn"></div>
-                      <p class="card-text fs-5 text-secondary mt-auto">${product.price}</p>
-                    </div>
-                  </div>
-                  </a>
-                </div>`;
+                </a>
+            </div>`;
         });
         products.filter(value => value.genre === "Festival" && value.genre !== "Vouchers").forEach(product => {
             //newEventsElm.href = `./pages/details.html?id=${product.id}`;
@@ -549,25 +528,19 @@ class UI {
             const time = `${hour}:${minutes}`;
             
             festivalE +=`
-            <div class="col-md-4 mb-3">
-            <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
-                  <div class="card border-0 bg-success bg-opacity-25">
-                    <img src="./images/${product.img}" class="card-img-top" alt="...">
-                    <div class="card-img-overlay heartIcon text-end">
-                      <span onclick="changeFaIcon(this)" class="me-3 text-danger bg-white bg-opacity-50 rounded-pill fs-4 px-1">
-                        <i id="faHeart" class="fa-regular fa-heart"></i>
-                      </span>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-3">
+                <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
+                    <div class="card kard rounded-0 bg-danger bg-opacity-25">
+                        <div class="img">
+                            <img src="./images/${product.img}" class="img-fluid" draggable="false" alt="">
+                        </div>
+                        <h6 class="card-text text-light text-center bg-dark bg-opacity-50 fw-bold text-uppercase mt-2">From ${getDate} ${monthName} ${new Date(product.date).getFullYear()} ${time}</h6>
+                        <span class="card-title text-center text-center fw-bold fs-5">${product.title}</span>
+                        <p class="text-center venue-text">${product.venue}</p>
+                        <span class="card-text text-center bg-white bg-opacity-50 text-secondary fw-bold">R ${product.price}</span>
                     </div>
-                    <div class="card-body d-flex flex-column" style="height:250px;">
-                      <p class="text-muted text-uppercase fw-bold item-date">From ${getDate} ${monthName} ${new Date(product.date).getFullYear()} ${time}</p>
-                      <h5 class="card-title">${product.title}</h5>
-                      <p class="card-text">${product.venue}</p>
-                      <div class="btn-nn"></div>
-                      <p class="card-text fs-5 text-secondary mt-auto">${product.price}</p>
-                    </div>
-                  </div>
-                  </a>
-                </div>`;
+                </a>
+            </div>`;
         });
         products.filter(value => value.genre === "Theatre" && value.genre !== "Vouchers").forEach(product => {
             //newEventsElm.href = `./pages/details.html?id=${product.id}`;
@@ -582,26 +555,19 @@ class UI {
             const time = `${hour}:${minutes}`;
             
             theatreE +=`
-            <div class="col-md-4 mb-3">
-            <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
-                  <div class="card border-0 bg-success bg-opacity-25">
-                    <img src="./images/${product.img}" class="card-img-top" alt="...">
-                    <div class="card-img-overlay heartIcon text-end">
-                      <span onclick="changeFaIcon(this)" class="me-3 text-danger bg-white bg-opacity-50 rounded-pill fs-4 px-1">
-                        <i id="faHeart" class="fa-regular fa-heart"></i>
-                      </span>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-3">
+                <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
+                    <div class="card kard rounded-0 bg-primary bg-opacity-25">
+                        <div class="img">
+                            <img src="./images/${product.img}" class="img-fluid" draggable="false" alt="">
+                        </div>
+                        <h6 class="card-text text-light text-center bg-dark bg-opacity-50 fw-bold text-uppercase mt-2">From ${getDate} ${monthName} ${new Date(product.date).getFullYear()} ${time}</h6>
+                        <span class="card-title text-center text-center fw-bold fs-5">${product.title}</span>
+                        <p class="text-center venue-text text-success">${product.venue}</p>
+                        <span class="card-text text-center bg-white bg-opacity-50 text-secondary fw-bold">R ${product.price}</span>
                     </div>
-                    <div class="card-body d-flex flex-column" style="height:250px;">
-                      <p class="text-muted text-uppercase fw-bold item-date">From ${getDate} ${monthName} ${new Date(product.date).getFullYear()} ${time}</p>
-                      <h5 class="card-title">${product.title}</h5>
-                      <p class="card-text">${product.venue}</p>
-                      <p class="card-text item-city">${product.city}</p>
-                      <div class="btn-nn"></div>
-                      <p class="card-text fs-5 text-secondary mt-auto">${product.price}</p>
-                    </div>
-                  </div>
-                  </a>
-                </div>`;
+                </a>
+            </div>`;
         });
         products.filter(value => value.genre === "Movies" && value.genre !== "Vouchers").forEach(product => {
             //newEventsElm.href = `./pages/details.html?id=${product.id}`;
@@ -616,26 +582,19 @@ class UI {
             const time = `${hour}:${minutes}`;
             
             moviesE +=`
-            <div class="col-md-4 mb-3">
-            <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
-                  <div class="card border-0 bg-success bg-opacity-25">
-                    <img src="./images/${product.img}" class="card-img-top" alt="...">
-                    <div class="card-img-overlay heartIcon text-end">
-                      <span onclick="changeFaIcon(this)" class="me-3 text-danger bg-white bg-opacity-50 rounded-pill fs-4 px-1">
-                        <i id="faHeart" class="fa-regular fa-heart"></i>
-                      </span>
+            <div class="col-lg-4 col-md-6 col-sm-6 mb-3">
+                <a href="./pages/details.html?genre=${product.genre}&id=${product.id}" style="text-decoration:none;">
+                    <div class="card kard rounded-0 bg-secondary bg-opacity-25">
+                        <div class="img">
+                            <img src="./images/${product.img}" class="img-fluid" draggable="false" alt="">
+                        </div>
+                        <h6 class="card-text text-light text-center bg-dark bg-opacity-50 fw-bold text-uppercase mt-2">From ${getDate} ${monthName} ${new Date(product.date).getFullYear()} ${time}</h6>
+                        <span class="card-title text-center text-center fw-bold fs-5">${product.title}</span>
+                        <p class="text-center venue-text text-success">${product.venue}</p>
+                        <span class="card-text text-center bg-white bg-opacity-50 text-secondary fw-bold">R ${product.price}</span>
                     </div>
-                    <div class="card-body d-flex flex-column" style="height:250px;">
-                      <p class="text-muted text-uppercase fw-bold item-date">From ${getDate} ${monthName} ${new Date(product.date).getFullYear()} ${time}</p>
-                      <h5 class="card-title">${product.title}</h5>
-                      <p class="card-text">${product.venue}</p>
-                      <p class="card-text item-city">${product.city}</p>
-                      <div class="btn-nn"></div>
-                      <p class="card-text fs-5 text-secondary mt-auto">${product.price}</p>
-                    </div>
-                  </div>
-                  </a>
-                </div>`;
+                </a>
+            </div>`;
         });
 
         

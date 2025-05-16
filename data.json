@@ -144,6 +144,18 @@
         "img":"panel_KIRSTENBOSCH Protea Garden King Protea Aug-Sep ALN 041 1110x740px.jpg"
     },
     {
+        "id": 16, 
+        "title":"Archery Nonsense",
+        "price":220,
+        "date":"2024-05-25T18:00",
+        "about":"Enjoy the beauty and diversity of South Africa's extraordinary indigenous flora in the magnificent landscape of Kirstenbosch National Botanical Garden.",
+        "genre":"Festival",
+        "venue":"Kirstenbosch, Cape Town",
+        "city":"Cape Town",
+        "more_info":"http://www.sanbi.org/gardens/kirstenbosch",
+        "img":"panel_KIRSTENBOSCH Protea Garden King Protea Aug-Sep ALN 041 1110x740px.jpg"
+    },
+    {
         "id": 13, 
         "title":"Hollywoodbets Top up voucher",
         "price":10,
