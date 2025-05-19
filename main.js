@@ -875,6 +875,17 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loginBtn").addEventListener("click", () => ui.login());
     document.getElementById("logoutBtn").addEventListener("click", () => ui.logout());
 
+    const navbarCollapsible = document.getElementById('navbarNavAltMarkup');
+    const togglerButton = document.querySelector('.navbar-toggler');
+
+    navbarCollapsible.addEventListener('show.bs.collapse', function () {
+      togglerButton.classList.add('x-icon');
+    });
+
+    navbarCollapsible.addEventListener('hide.bs.collapse', function () {
+      togglerButton.classList.remove('x-icon');
+    });
+
     // Get all products
     products.getProducts().then(products => {
         ui.displayProducts(products);

@@ -38,6 +38,26 @@ body{
   clip-path: polygon(0 17%, 100% 0, 100% 82%, 0 99%);
 }
 
+.navbar-toggler.x-icon .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' d='M4 4 L26 26 M4 26 L26 4'/></svg>");
+}
+
+/* Example basic styles for the navbar */
+.navbar {
+  transition: background-color 0.3s ease;
+}
+
+/* These styles will be applied when the navbar is expanded and the toggler has the x-icon class */
+.navbar-toggler.x-icon + .navbar-collapse {
+  background-color: #ddd; /* Change navbar background color */
+  text-align: center;
+}
+
+/* Optional: Modify link styles when navbar is expanded */
+.navbar-toggler.x-icon + .navbar-collapse .nav-link {
+  color: #018749; /* Change the link color */
+}
+
 /* Tablet styles (applies to widths 601px - 900px) */
 @media screen and (max-width: 800px) {
   .signup-card .card .card-title{

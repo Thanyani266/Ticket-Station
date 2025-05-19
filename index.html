@@ -954,32 +954,6 @@
       </footer>
       <!-- Footer -->
     </div>
-    <script>
-      // Hardcoded credentials
-      const hardcodedUser = {
-    username: "admin",
-    password: "password123"
-};
-
-
-
-function login() {
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    if (username === hardcodedUser.username && password === hardcodedUser.password) {
-        localStorage.setItem("loggedInUser", username);
-        location.reload();
-    } else {
-        alert("Invalid username or password!");
-    }
-}
-
-function logout() {
-    localStorage.removeItem("loggedInUser");
-    location.reload(); // Reload the page after logout
-}
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
